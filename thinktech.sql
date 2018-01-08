@@ -21,7 +21,7 @@ insert into tasks(name,description) values("Conception de l'interface","cette ph
 insert into tasks(name,description) values("Développement des fonctionnalités","cette phase est celle du développement des fonctionnalités du produit");
 insert into tasks(name,description) values("Tests","cette phase permet de tester les fonctionnalités du produit");
 insert into tasks(name,description) values("Validation","cette phase est celle de la validation des fonctionnalités du produit");
-insert into tasks(name,description) values("Livraison","cette phase finale est celle de la livraison du produit");
+insert into tasks(name,description) values("Livraison du produit","cette phase finale est celle de la livraison du produit");
 
 drop table IF EXISTS projects_tasks;
 
@@ -56,7 +56,7 @@ date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int n
 
 drop table IF EXISTS structures;
 
-create table structures(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(100),size varchar(10) default "small",state varchar(100),
+create table structures(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
 country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),ninea varchar(100));
 
 insert into structures(name,ninea) values("ThinkTech","4589887");
@@ -69,8 +69,6 @@ profession varchar(100),role varchar(100) not null,telephone varchar(100),owner 
 drop table IF EXISTS users;
 
 create table users(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(100) not null, password varchar(100) not null,
-profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,structure_id int not null);
+profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,type varchar(50) default "customer", structure_id int not null);
 
-insert into users(name,email,password,profession,role,telephone,structure_id) values("Mamadou Lamine Ba","lamine.ba@thinktech.sn","passer","CEO","administrateur","774125559",1);
-insert into users(name,email,password,profession,role,telephone,structure_id) values("Pape Babacar Ba","pbb@thinktech.sn","passer","CTO","administrateur","775593264",1);
-
+create table accounts(id int AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100) not null,activated boolean, user_id int not null);
