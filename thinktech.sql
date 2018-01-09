@@ -21,11 +21,12 @@ insert into tasks(name,description) values("Conception de l'interface","cette ph
 insert into tasks(name,description) values("Développement des fonctionnalités","cette phase est celle du développement des fonctionnalités du produit");
 insert into tasks(name,description) values("Tests","cette phase permet de tester les fonctionnalités du produit");
 insert into tasks(name,description) values("Validation","cette phase est celle de la validation des fonctionnalités du produit");
-insert into tasks(name,description) values("Livraison du produit","cette phase finale est celle de la livraison du produit");
+insert into tasks(name,description) values("Livraison du produit","cette phase est celle du deploiement du produit final");
+insert into tasks(name,description) values("Formation","cette phase finale est celle de la formation pour une prise en main du produit");
 
 drop table IF EXISTS projects_tasks;
 
-create table projects_tasks(id int AUTO_INCREMENT PRIMARY KEY,priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null);
+create table projects_tasks(id int AUTO_INCREMENT PRIMARY KEY,info text, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null);
 
 drop table IF EXISTS projects_comments;
 
@@ -58,8 +59,6 @@ drop table IF EXISTS structures;
 
 create table structures(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
 country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),ninea varchar(100));
-
-insert into structures(name,ninea) values("ThinkTech","4589887");
 
 drop table IF EXISTS users;
 
