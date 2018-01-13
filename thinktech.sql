@@ -14,7 +14,7 @@ drop table IF EXISTS tasks;
 create table tasks(id int AUTO_INCREMENT PRIMARY KEY,name varchar(200) not null,description text);
 
 insert into tasks(name,description) values("Contrat et Caution","cette phase intiale établit la relation légale qui vous lie à ThinkTech");
-insert into tasks(name,description) values("Traitement","cette phase est celle où notre staff technique prend en charge votre projet");
+insert into tasks(name,description) values("Traitement","cette phase d'approbation est celle où notre équipe technique prend en charge votre projet");
 insert into tasks(name,description) values("Analyse du projet","cette phase est celle de l'analyse de votre projet pour une meilleure compréhension des objectifs");
 insert into tasks(name,description) values("Définition des fonctionnalités","cette phase est celle de la définition des fonctionnalités du produit");
 insert into tasks(name,description) values("Conception de l'interface","cette phase est celle de la conception de l'interface utilisateur");
