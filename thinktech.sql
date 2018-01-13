@@ -14,7 +14,7 @@ drop table IF EXISTS tasks;
 create table tasks(id int AUTO_INCREMENT PRIMARY KEY,name varchar(200) not null,description text);
 
 insert into tasks(name,description) values("Contrat et Caution","cette phase intiale établit la relation légale qui vous lie à ThinkTech");
-insert into tasks(name,description) values("Traitement","cette phase est celle où l'équipe technique prend en charge votre projet");
+insert into tasks(name,description) values("Traitement","cette phase est celle où notre staff technique prend en charge votre projet");
 insert into tasks(name,description) values("Analyse du projet","cette phase est celle de l'analyse de votre projet pour une meilleure compréhension des objectifs");
 insert into tasks(name,description) values("Définition des fonctionnalités","cette phase est celle de la définition des fonctionnalités du produit");
 insert into tasks(name,description) values("Conception de l'interface","cette phase est celle de la conception de l'interface utilisateur");
@@ -39,7 +39,7 @@ create table documents(id int AUTO_INCREMENT PRIMARY KEY,name varchar(300) not n
 drop table IF EXISTS tickets;
 
 create table tickets(id int AUTO_INCREMENT PRIMARY KEY,subject varchar(100) not null,service varchar(100) not null,
-message text not null, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",progression int default 0, user_id int not null,structure_id int not null);
+message text not null, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",progression int default 0, closedOn TIMESTAMP null,closedBy int,user_id int not null,structure_id int not null);
 
 drop table IF EXISTS tickets_comments;
 
@@ -53,7 +53,7 @@ message text not null, date TIMESTAMP DEFAULT NOW(), unread boolean default true
 drop table IF EXISTS bills;
 
 create table bills(id int AUTO_INCREMENT PRIMARY KEY,fee varchar(200) not null,
-date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int not null,paidOn TIMESTAMP null,paidWith varchar(200),project_id int not null);
+date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int not null,paidOn TIMESTAMP null,paidWith varchar(200),paidBy int,project_id int not null);
 
 drop table IF EXISTS structures;
 
@@ -70,4 +70,4 @@ drop table IF EXISTS users;
 create table users(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(100) not null, password varchar(100) not null,
 profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,type varchar(50) default "customer", structure_id int not null);
 
-create table accounts(id int AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100) not null,activated boolean, user_id int not null);
+create table accounts(id int AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100),activated boolean default false, locked boolean default false,user_id int not null);
