@@ -34,7 +34,7 @@ create table projects_comments(id int AUTO_INCREMENT PRIMARY KEY,message text no
 
 drop table IF EXISTS documents;
 
-create table documents(id int AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,date TIMESTAMP DEFAULT NOW(),project_id int not null,createdBy int not null);
+create table documents(id int AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null, size long ,date TIMESTAMP DEFAULT NOW(),project_id int not null,createdBy int not null);
 
 drop table IF EXISTS tickets;
 
