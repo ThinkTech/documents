@@ -60,6 +60,8 @@ drop table IF EXISTS structures;
 create table structures(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
 country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),ninea varchar(100));
 
+insert into structures(name) values("ThinkTech");
+
 drop table IF EXISTS users;
 
 create table users(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(100) not null, password varchar(100) not null,
@@ -71,3 +73,6 @@ create table users(id int AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null
 profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,type varchar(50) default "customer", structure_id int not null);
 
 create table accounts(id int AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100),activated boolean default false, locked boolean default false,user_id int not null);
+
+insert into users(name,email,password,role,type,structure_id) values("support","support@thinktech.sn","initial","collaborateur","staff",1);
+insert into accounts(activated,user_id) values(true,1);
