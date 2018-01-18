@@ -52,7 +52,7 @@ message text not null, date TIMESTAMP DEFAULT NOW(), unread boolean default true
 
 drop table IF EXISTS bills;
 
-create table bills(id int AUTO_INCREMENT PRIMARY KEY,fee varchar(200) not null,code varchar(200) not null,
+create table bills(id int AUTO_INCREMENT PRIMARY KEY,fee varchar(200) not null,code varchar(200),
 date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int not null,paidOn TIMESTAMP null,paidWith varchar(200),paidBy int,project_id int not null);
 
 drop table IF EXISTS structures;
