@@ -13,16 +13,16 @@ drop table IF EXISTS tasks;
 
 create table tasks(id int AUTO_INCREMENT PRIMARY KEY,name varchar(200) not null,description text);
 
-insert into tasks(name,description) values("Contrat et Caution","cette phase intiale établit la relation légale qui vous lie à ThinkTech");
-insert into tasks(name,description) values("Traitement","cette phase d'approbation est celle où notre équipe technique prend en charge votre projet");
-insert into tasks(name,description) values("Analyse du projet","cette phase est celle de l'analyse de votre projet pour une meilleure compréhension des objectifs");
-insert into tasks(name,description) values("Définition des fonctionnalités","cette phase est celle de la définition des fonctionnalités du produit");
-insert into tasks(name,description) values("Conception de l'interface","cette phase est celle de la conception de l'interface utilisateur");
-insert into tasks(name,description) values("Développement des fonctionnalités","cette phase est celle du développement des fonctionnalités du produit");
-insert into tasks(name,description) values("Tests","cette phase permet de tester les fonctionnalités du produit");
-insert into tasks(name,description) values("Validation","cette phase est celle de la validation des fonctionnalités du produit");
-insert into tasks(name,description) values("Livraison du produit","cette phase est celle du deploiement du produit final");
-insert into tasks(name,description) values("Formation","cette phase finale est celle de la formation pour une prise en main du produit");
+insert into tasks(id,name,description) values(1,"Contrat et Caution","cette phase intiale établit la relation légale qui vous lie à ThinkTech");
+insert into tasks(id,name,description) values(2,"Traitement","cette phase d'approbation est celle où notre équipe technique prend en charge votre projet");
+insert into tasks(id,name,description) values(3,"Analyse du projet","cette phase est celle de l'analyse de votre projet pour une meilleure compréhension des objectifs");
+insert into tasks(id,name,description) values(4,"Définition des fonctionnalités","cette phase est celle de la définition des fonctionnalités du produit");
+insert into tasks(id,name,description) values(5,"Conception de l'interface","cette phase est celle de la conception de l'interface utilisateur");
+insert into tasks(id,name,description) values(6,"Développement des fonctionnalités","cette phase est celle du développement des fonctionnalités du produit");
+insert into tasks(id,name,description) values(7,"Tests","cette phase permet de tester les fonctionnalités du produit");
+insert into tasks(id,name,description) values(8,"Validation","cette phase est celle de la validation des fonctionnalités du produit");
+insert into tasks(id,name,description) values(9,"Livraison du produit","cette phase est celle du deploiement du produit final");
+insert into tasks(id,name,description) values(10,"Formation","cette phase finale est celle de la formation pour une prise en main du produit");
 
 drop table IF EXISTS projects_tasks;
 
