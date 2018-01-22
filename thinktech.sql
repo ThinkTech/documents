@@ -76,5 +76,5 @@ drop table IF EXISTS accounts;
 
 create table accounts(id bigint AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100),activated boolean default false, locked boolean default false,user_id int not null);
 
-insert into users(name,email,password,role,type,structure_id) values("Assistance Technique","support@thinktech.sn","initial","collaborateur","staff",1);
+insert into users(name,email,password,role,type,structure_id) values("Assistance Technique","support@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
 insert into accounts(activated,user_id) values(true,1);
