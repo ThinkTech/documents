@@ -60,21 +60,16 @@ drop table IF EXISTS structures;
 create table structures(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
 country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),ninea varchar(100));
 
-insert into structures(name) values("ThinkTech");
+insert into structures(id,name) values(1,"ThinkTech");
 
 drop table IF EXISTS users;
 
-create table users(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(100) not null, password varchar(100) not null,
-profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,structure_id int not null);
-
-drop table IF EXISTS users;
-
-create table users(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(100) not null, password varchar(100) not null,
-profession varchar(100),role varchar(100) not null,telephone varchar(100),owner boolean default false,type varchar(50) default "customer", structure_id int not null);
+create table users(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(200) not null, password varchar(200) not null,
+profession varchar(200),role varchar(100) not null,telephone varchar(100),owner boolean default false,structure_id int not null);
 
 drop table IF EXISTS accounts;
 
 create table accounts(id bigint AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100),activated boolean default false, locked boolean default false,user_id int not null);
 
-insert into users(name,email,password,role,type,structure_id) values("Assistance Technique","support@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
+insert into users(id,name,email,password,role,type,structure_id) values(1,"Assistance Technique","support@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
 insert into accounts(activated,user_id) values(true,1);
