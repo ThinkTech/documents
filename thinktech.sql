@@ -62,10 +62,20 @@ country varchar(200),city varchar(200),location varchar(200),telephone varchar(6
 
 insert into structures(id,name) values(1,"ThinkTech");
 
+drop table IF EXISTS services;
+
+create table services(name varchar(200) not null PRIMARY KEY,description text,mandatory boolean);
+
+insert into services(name,mandatory) values("web dev",true);
+
+drop table IF EXISTS subscriptions;
+
+create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id int not null);
+
 drop table IF EXISTS users;
 
 create table users(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(200) not null, password varchar(200) not null,
-profession varchar(200),role varchar(100) not null,telephone varchar(100),owner boolean default false,structure_id int not null);
+profession varchar(200),role varchar(100) not null,type varchar(200) default 'customer',telephone varchar(100),owner boolean default false,structure_id int not null);
 
 drop table IF EXISTS accounts;
 
