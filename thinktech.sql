@@ -26,7 +26,7 @@ insert into tasks(id,name,description) values(10,"Formation","cette phase finale
 
 drop table IF EXISTS projects_tasks;
 
-create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,info text, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null);
+create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,info text, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null,closedOn TIMESTAMP null);
 
 drop table IF EXISTS projects_comments;
 
@@ -70,12 +70,12 @@ insert into services(name,mandatory) values("web dev",true);
 
 drop table IF EXISTS subscriptions;
 
-create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id int not null);
+create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id int not null,date TIMESTAMP DEFAULT NOW());
 
 drop table IF EXISTS users;
 
 create table users(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300) not null,email varchar(200) not null, password varchar(200) not null,
-profession varchar(200),role varchar(100) not null,type varchar(200) default 'customer',telephone varchar(100),owner boolean default false,structure_id int not null);
+profession varchar(200),role varchar(100) not null,type varchar(200) default 'customer',telephone varchar(100),owner boolean default false,structure_id int not null,createdOn TIMESTAMP DEFAULT NOW());
 
 drop table IF EXISTS accounts;
 
