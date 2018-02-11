@@ -26,7 +26,7 @@ insert into tasks(id,name,description) values(10,"Formation","cette phase finale
 
 drop table IF EXISTS projects_tasks;
 
-create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,info text, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null,closedOn TIMESTAMP null);
+create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,info text, priority varchar(30) default "normal" not null, date TIMESTAMP null, duration int, status varchar(30) default "stand by" ,progression int default 0, task_id int not null,project_id int not null,closedOn TIMESTAMP null);
 
 drop table IF EXISTS projects_comments;
 
