@@ -64,14 +64,11 @@ drop table IF EXISTS accounts;
 
 create table accounts(id bigint AUTO_INCREMENT PRIMARY KEY, activation_code varchar(100),activated boolean default false, locked boolean default false,user_id bigint not null);
 
-insert into users(id,name,email,password,role,type,structure_id) values(1,"Mamadou Lamine Ba","lamine.ba@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
+insert into users(id,name,email,password,role,type,structure_id) values(1,"Équipe Développement","dev@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
 insert into accounts(activated,user_id) values(true,1);
 
-insert into users(id,name,email,password,role,type,structure_id) values(2,"Pape Babacar Ba","pbb@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
+insert into users(id,name,email,password,role,type,structure_id) values(2,"Assistance Technique","support@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
 insert into accounts(activated,user_id) values(true,2);
-
-insert into users(id,name,email,password,role,type,structure_id) values(3,"Assistance Technique","support@thinktech.sn","8ad7d21c71b049b7003ba31b5f1322974df77ac8","collaborateur","staff",1);
-insert into accounts(activated,user_id) values(true,3);
 
 drop table IF EXISTS others;
 
