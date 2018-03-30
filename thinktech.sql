@@ -7,7 +7,7 @@ use thinktech;
 drop table IF EXISTS projects;
 
 create table projects(id bigint AUTO_INCREMENT PRIMARY KEY,subject varchar(100) not null,service varchar(100) not null,
-plan varchar(100), description text, priority varchar(30) default "normal" , date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by" not null,duration int default 3,progression int default 0, user_id bigint not null,structure_id bigint not null,closedOn TIMESTAMP null);
+plan varchar(100), description text, priority varchar(30) default "normal" , date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by" not null,duration int default 3,progression int default 0, user_id bigint not null,structure_id bigint not null,startedOn TIMESTAMP null,closedOn TIMESTAMP null);
 
 drop table IF EXISTS projects_tasks;
 
