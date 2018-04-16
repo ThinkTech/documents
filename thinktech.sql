@@ -38,7 +38,7 @@ message text not null, date TIMESTAMP DEFAULT NOW(), unread boolean default true
 drop table IF EXISTS bills;
 
 create table bills(id bigint AUTO_INCREMENT PRIMARY KEY,fee varchar(200) not null,code varchar(200),
-date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int not null,paidOn TIMESTAMP null,paidWith varchar(200),paidBy int,project_id bigint not null,discount_id bigint,group_id bigint);
+date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",amount int not null,paidOn TIMESTAMP null,paidWith varchar(200),paidBy int,project_id bigint not null,per varchar(20),discount_id bigint,group_id bigint);
 
 drop table IF EXISTS discounts;
 
