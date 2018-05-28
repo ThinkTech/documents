@@ -30,11 +30,6 @@ drop table IF EXISTS tickets_comments;
 
 create table tickets_comments(id bigint AUTO_INCREMENT PRIMARY KEY,message text not null,date TIMESTAMP DEFAULT NOW(),ticket_id bigint not null,createdBy bigint not null);
 
-drop table IF EXISTS messages;
-
-create table messages(id bigint AUTO_INCREMENT PRIMARY KEY,subject varchar(200) not null,
-message text not null, date TIMESTAMP DEFAULT NOW(), unread boolean default true, user_id bigint not null,structure_id bigint not null);
-
 drop table IF EXISTS bills;
 
 create table bills(id bigint AUTO_INCREMENT PRIMARY KEY,fee varchar(200) not null,service varchar(100) not null,code varchar(200),
