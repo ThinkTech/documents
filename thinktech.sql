@@ -52,7 +52,7 @@ create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(
 
 drop table IF EXISTS domains;
 
-create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,email varchar(300),year int,action varchar(30),eppCode varchar(300),price int not null,registered boolean,structure_id bigint not null);
+create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,email varchar(300),year int,action varchar(30),eppCode varchar(300),price int not null,date TIMESTAMP DEFAULT NOW(),registered boolean,registered TIMESTAMP null,structure_id bigint not null);
 
 drop table IF EXISTS users;
 
