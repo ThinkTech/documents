@@ -48,11 +48,11 @@ insert into structures(id,name) values(1,"ThinkTech");
 
 drop table IF EXISTS subscriptions;
 
-create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id bigint not null,per varchar(20) default "year",plan varchar(100),date TIMESTAMP DEFAULT NOW(),actived boolean default true,endedOn TIMESTAMP null);
+create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id bigint not null,per varchar(20) default "year",date TIMESTAMP DEFAULT NOW(),actived boolean default true,endedOn TIMESTAMP null);
 
 drop table IF EXISTS domains;
 
-create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,email varchar(300),year int,action varchar(30),eppCode varchar(300),price int not null,date TIMESTAMP DEFAULT NOW(),status varchar(30) default "stand by" not null,registeredOn TIMESTAMP null,structure_id bigint not null);
+create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,emailOn boolean default false,email varchar(300),plan varchar(100),year int,action varchar(30),eppCode varchar(300),price int not null,date TIMESTAMP DEFAULT NOW(),status varchar(30) default "stand by" not null,registeredOn TIMESTAMP null,structure_id bigint not null);
 
 drop table IF EXISTS users;
 
