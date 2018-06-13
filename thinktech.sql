@@ -1,9 +1,3 @@
-drop database IF EXISTS thinktech;
-
-create database thinktech;
-
-use thinktech;
-
 drop table IF EXISTS projects;
 
 create table projects(id bigint AUTO_INCREMENT PRIMARY KEY,subject varchar(100) not null,service varchar(100) not null,
