@@ -5,7 +5,7 @@ plan varchar(100), description text, priority varchar(30) default "normal" , dat
 
 drop table IF EXISTS projects_tasks;
 
-create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(200) not null,description text,info text,priority varchar(30) default "normal" not null, duration int, status varchar(30) default "stand by" ,progression int default 0,project_id bigint not null,startedOn TIMESTAMP null,closedOn TIMESTAMP null);
+create table projects_tasks(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(200) not null,description text,info text,priority varchar(30) default "normal" not null, duration int, status varchar(30) default "stand by" ,progression int default 0,project_id bigint not null,assignedTo bigint, startedOn TIMESTAMP null,closedOn TIMESTAMP null);
 
 drop table IF EXISTS projects_comments;
 
