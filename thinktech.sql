@@ -18,7 +18,7 @@ create table documents(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) no
 drop table IF EXISTS tickets;
 
 create table tickets(id bigint AUTO_INCREMENT PRIMARY KEY,subject varchar(100) not null,service varchar(100) not null,
-message text not null, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",progression int default 0, closedOn TIMESTAMP null,closedBy int,user_id bigint not null,structure_id bigint not null);
+message text not null, priority varchar(30) default "normal" not null, date TIMESTAMP DEFAULT NOW(), status varchar(30) default "stand by",progression int default 0, closedOn TIMESTAMP null,closedBy int,user_id bigint not null,structure_id bigint not null,product_id bigint);
 
 drop table IF EXISTS tickets_comments;
 
