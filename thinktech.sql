@@ -46,7 +46,7 @@ create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(
 
 drop table IF EXISTS domains;
 
-create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,emailOn boolean default false,emailAccountCreated boolean default false,email varchar(300),plan varchar(100),year int,action varchar(30),eppCode varchar(300),price int not null,date TIMESTAMP DEFAULT NOW(),status varchar(30) default "stand by" not null,emailActivatedOn TIMESTAMP null,registeredOn TIMESTAMP null,user_id bigint not null,structure_id bigint not null);
+create table domains(id bigint AUTO_INCREMENT PRIMARY KEY,name varchar(300) not null,extension varchar(40) not null,emailOn boolean default false,emailAccountCreated boolean default false,email varchar(300),plan varchar(100),year int,action varchar(30),eppCode varchar(300),price int not null,date TIMESTAMP DEFAULT NOW(),status varchar(30) default "stand by" not null,emailActivatedOn TIMESTAMP null,registeredOn TIMESTAMP null,registrar varchar(100) default "resellerspanel",user_id bigint not null,structure_id bigint not null);
 
 drop table IF EXISTS users;
 
