@@ -66,7 +66,7 @@ insert into accounts(activated,user_id) values(true,2);
 drop table IF EXISTS others;
 
 create table others(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
-type varchar(200),converted boolean,country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),createdOn TIMESTAMP DEFAULT NOW(),createdBy bigint);
+type varchar(200),converted boolean default false,country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),createdOn TIMESTAMP DEFAULT NOW(),createdBy bigint);
 
 drop table IF EXISTS contacts;
 
