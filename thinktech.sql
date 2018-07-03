@@ -36,7 +36,7 @@ create table discounts(id bigint AUTO_INCREMENT PRIMARY KEY,rate int,date TIMEST
 drop table IF EXISTS structures;
 
 create table structures(id bigint AUTO_INCREMENT PRIMARY KEY, name varchar(300),acronym varchar(30),business varchar(300),size varchar(10) default "small",state varchar(100),
-balance bigint,country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200));
+balance bigint,country varchar(200),city varchar(200),location varchar(200),telephone varchar(60),email varchar(100),bp varchar(60),fax varchar(60),website varchar(200),zoid bigint);
 
 insert into structures(id,name) values(1,"ThinkTech");
 
