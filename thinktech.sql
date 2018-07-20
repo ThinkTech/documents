@@ -42,7 +42,7 @@ insert into structures(id,name) values(1,"ThinkTech");
 
 drop table IF EXISTS subscriptions;
 
-create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id bigint not null,date TIMESTAMP DEFAULT NOW(),actived boolean default true,endedOn TIMESTAMP null);
+create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id bigint not null,date TIMESTAMP DEFAULT NOW(),active boolean default true);
 
 drop table IF EXISTS domains;
 
