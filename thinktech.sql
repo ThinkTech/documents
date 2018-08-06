@@ -40,6 +40,10 @@ balance bigint,country varchar(200),city varchar(200),location varchar(200),tele
 
 insert into structures(id,name) values(1,"ThinkTech");
 
+drop table IF EXISTS structures_infos;
+
+create table structures_infos(id bigint PRIMARY KEY, zoid bigint);
+
 drop table IF EXISTS subscriptions;
 
 create table subscriptions(id bigint AUTO_INCREMENT PRIMARY KEY,service varchar(300) not null,structure_id bigint not null,date TIMESTAMP DEFAULT NOW(),active boolean default true);
