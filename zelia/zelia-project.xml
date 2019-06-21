@@ -48,7 +48,7 @@
   <con:entry key="motifLabel" value="p45566899"/>
   <con:entry key="operation" value="1"/>
   <con:entry key="motifCode" value="454445"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>sessionId</con:entry><con:entry>operation</con:entry><con:entry>login</con:entry><con:entry>cardCode</con:entry><con:entry>motifCode</con:entry><con:entry>motifIden</con:entry><con:entry>motifLabel</con:entry><con:entry>pin</con:entry><con:entry>phoneNumber</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getLocation" path="/getLocation" id="4049964c-3d54-42d6-8653-bb8b2fdb02bf"><con:description>this service allows users to get a list of branch, atm and agents from a geographic coordinates</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>lat</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>lon</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getLocation" id="0a6fd234-edb4-4807-b74e-6ab04f80fa34" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getLocationRequest" id="b84178ac-b7e5-4ebb-a2b8-e879ce8909af" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getLocation</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>sessionId</con:entry><con:entry>operation</con:entry><con:entry>login</con:entry><con:entry>cardCode</con:entry><con:entry>motifCode</con:entry><con:entry>motifIden</con:entry><con:entry>motifLabel</con:entry><con:entry>pin</con:entry><con:entry>phoneNumber</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getLocation" path="/getLocation" id="4049964c-3d54-42d6-8653-bb8b2fdb02bf"><con:description>this service allows users to get a list of branch, atm and agents from a geographic coordinates</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>lat</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>lon</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getLocation" id="0a6fd234-edb4-4807-b74e-6ab04f80fa34" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getLocationRequest" id="b84178ac-b7e5-4ebb-a2b8-e879ce8909af" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getLocation</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="85555565"/>
   <con:entry key="institutionId" value="45455454"/>
@@ -57,10 +57,10 @@
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="lon" value="5556656565"/>
-  <con:entry key="sessionId" value="4555555"/>
+  <con:entry key="sessionId" value="12345"/>
   <con:entry key="login" value="hicham"/>
   <con:entry key="lat" value="45556565"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>lat</con:entry><con:entry>lon</con:entry><con:entry>sessionId</con:entry><con:entry>login</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getLoyaltyPoint" path="/getLoyaltyPoint" id="55bd0c90-f6eb-4306-8ef7-3b0adc6e9d3a"><con:description>this service allows users to get their loyalty point</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cardCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getLoyaltyPoint" id="08ebf71e-58e5-44db-9a98-00c627d82459" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getLoyaltyPointRequest" id="94ba4065-62b6-4db7-8223-3bb2f13ed6ab" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getLoyaltyPoint</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>lat</con:entry><con:entry>lon</con:entry><con:entry>sessionId</con:entry><con:entry>login</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getLoyaltyPoint" path="/getLoyaltyPoint" id="55bd0c90-f6eb-4306-8ef7-3b0adc6e9d3a"><con:description>this service allows users to get their loyalty point</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cardCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getLoyaltyPoint" id="08ebf71e-58e5-44db-9a98-00c627d82459" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getLoyaltyPointRequest" id="94ba4065-62b6-4db7-8223-3bb2f13ed6ab" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getLoyaltyPoint</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="1222255"/>
   <con:entry key="institutionId" value="12212"/>
@@ -70,19 +70,19 @@
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="cardCode" value="455454"/>
   <con:entry key="login" value="hicham"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="topUpCard" path="/topUpCard" id="3f3df50f-d47a-40c3-9eab-216a439dddd3"><con:description>this service allows users to top up a card</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber </con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cardCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>qrCodeData</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="topUpCard" id="c6734e3a-aa7d-4870-aa81-99f8ce594c6f" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="toUpCardRequest" id="42cf9605-fb91-414c-92de-c18d5241a588" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/topUpCard</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry><con:entry>phoneNumber</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="topUpCard" path="/topUpCard" id="3f3df50f-d47a-40c3-9eab-216a439dddd3"><con:description>this service allows users to top up a card</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cardCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>qrCodeData</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="topUpCard" id="c6734e3a-aa7d-4870-aa81-99f8ce594c6f" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="toUpCardRequest" id="42cf9605-fb91-414c-92de-c18d5241a588" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/topUpCard</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="qrCodeData" value="5445454"/>
+  <con:entry key="phoneNumber" value="555555"/>
   <con:entry key="institutionId" value="45545454"/>
   <con:entry key="customerPreferedLanguage" value="1"/>
   <con:entry key="requesTime" value="454545445"/>
   <con:entry key="appType" value="1"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="cardCode" value="455454"/>
-  <con:entry key="phoneNumber " value="1455454"/>
   <con:entry key="sessionId" value="4445456"/>
   <con:entry key="login" value="hicham"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber </con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry><con:entry>qrCodeData</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getMySecretQuestion" path="/getMySecretQuestion" id="6b67699e-00d4-45ea-883e-eb653aaa9192"><con:description>this service allows users to  get questions list to register</con:description><con:settings/><con:parameters><con:parameter><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getMySecretQuestion" id="cc72e2a6-3f6b-4d15-8365-35b41b952417" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getMySecretQuestion" id="df7e23c9-5301-4ad0-be88-8f846a658568" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getMySecretQuestion</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry><con:entry>qrCodeData</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="getMySecretQuestion" path="/getMySecretQuestion" id="6b67699e-00d4-45ea-883e-eb653aaa9192"><con:description>this service allows users to  get questions list to register</con:description><con:settings/><con:parameters><con:parameter><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="getMySecretQuestion" id="cc72e2a6-3f6b-4d15-8365-35b41b952417" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="getMySecretQuestion" id="df7e23c9-5301-4ad0-be88-8f846a658568" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getMySecretQuestion</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="56556565656"/>
   <con:entry key="institutionId" value="44545445"/>
@@ -90,7 +90,7 @@
   <con:entry key="requesTime" value="444454545454"/>
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerPreferedLanguage</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotUserName" path="/forgotUserName" id="c98153b6-dbeb-4f85-ba83-8a570bdfc444"><con:description>this service allows users to regenerate a  username</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotUserName" id="61e5d919-6ba7-4510-8966-f2efdc8daea4" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotUserNameRequest" id="e688303f-6d66-4602-a427-41f38555c7bb" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotUserName</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>appPlateform</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotUserName" path="/forgotUserName" id="c98153b6-dbeb-4f85-ba83-8a570bdfc444"><con:description>this service allows users to regenerate a  username</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotUserName" id="61e5d919-6ba7-4510-8966-f2efdc8daea4" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotUserNameRequest" id="e688303f-6d66-4602-a427-41f38555c7bb" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotUserName</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="8566446"/>
   <con:entry key="institutionId" value="115566"/>
@@ -102,7 +102,7 @@
   <con:entry key="secretQuestionAnswer" value="answer"/>
   <con:entry key="sessionId" value="1111455555"/>
   <con:entry key="secretQuestionCode" value="question"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>pin</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="updateCustomerAgent" path="/updateCustomerAgent" id="d42108f4-ffff-4bbb-8c70-600ef7f38488"><con:description>this service allows users to update customer and agent informations</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerAgentId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>mail</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>address1</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>city</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>address2</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>photoUrl</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="updateCustomerAgent" id="067b2461-66d5-47bb-b9cf-0fc6d658df48" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="updateCustomerAgentRequest" id="18097e62-f126-4ca8-a504-d2850f9e1f46" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/updateCustomerAgent</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>pin</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>appVersion</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="updateCustomerAgent" path="/updateCustomerAgent" id="d42108f4-ffff-4bbb-8c70-600ef7f38488"><con:description>this service allows users to update customer and agent informations</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerAgentId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>mail</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>address1</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>city</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>address2</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>photoUrl</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="updateCustomerAgent" id="067b2461-66d5-47bb-b9cf-0fc6d658df48" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="updateCustomerAgentRequest" id="18097e62-f126-4ca8-a504-d2850f9e1f46" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/updateCustomerAgent</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="customerAgentId" value="1111221"/>
   <con:entry key="institutionId" value="456555665"/>
@@ -119,7 +119,7 @@
   <con:entry key="requesTime" value="4445545454"/>
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerAgentId</con:entry><con:entry>mail</con:entry><con:entry>address1</con:entry><con:entry>city</con:entry><con:entry>address2</con:entry><con:entry>login</con:entry><con:entry>sessionId</con:entry><con:entry>photoUrl</con:entry><con:entry>pin</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="changePassword" path="/changePassword" id="7adac40a-3510-4bed-aabe-842c4c273979"><con:description>this service allows users to change the password</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>oldPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerAgentId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="changePassword" id="9a5fd4bc-6ca3-4e60-931f-8c6c53b71868" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="changePasswordRequest" id="e5b6e093-6ff1-44aa-a1b7-c9ac0062ce90" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/changePassword</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerAgentId</con:entry><con:entry>mail</con:entry><con:entry>address1</con:entry><con:entry>city</con:entry><con:entry>address2</con:entry><con:entry>login</con:entry><con:entry>sessionId</con:entry><con:entry>photoUrl</con:entry><con:entry>pin</con:entry><con:entry>appPlateform</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="changePassword" path="/changePassword" id="7adac40a-3510-4bed-aabe-842c4c273979"><con:description>this service allows users to change the password</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>oldPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerAgentId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="changePassword" id="9a5fd4bc-6ca3-4e60-931f-8c6c53b71868" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="changePasswordRequest" id="e5b6e093-6ff1-44aa-a1b7-c9ac0062ce90" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/changePassword</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="78994455"/>
   <con:entry key="customerAgentId" value="21121"/>
@@ -131,20 +131,20 @@
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="newPassword" value="testing"/>
   <con:entry key="sessionId" value="444455445"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>oldPassword</con:entry><con:entry>newPassword</con:entry><con:entry>customerAgentId</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotPassword" path="/forgotPassword" id="f10e8c99-03ac-4fc2-9e8f-c0bda9ca2e84"><con:description>this service allows users to regenerate a new  password</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotPassword" id="59d5bcc2-aefb-4d23-b448-5d74398f5507" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotPasswordRequest" id="b797cabf-0dee-4387-b026-37a5624e102a" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotPassword</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>oldPassword</con:entry><con:entry>customerAgentId</con:entry><con:entry>sessionId</con:entry><con:entry>newPassword</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotPassword" path="/forgotPassword" id="f10e8c99-03ac-4fc2-9e8f-c0bda9ca2e84"><con:description>this service allows users to regenerate a new  password</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPassword</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotPassword" id="59d5bcc2-aefb-4d23-b448-5d74398f5507" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotPasswordRequest" id="b797cabf-0dee-4387-b026-37a5624e102a" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotPassword</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
-  <con:entry key="phoneNumber" value="1133333333"/>
   <con:entry key="institutionId" value="111222"/>
-  <con:entry key="pin" value="4454544545"/>
   <con:entry key="customerPreferedLanguage" value="1"/>
+  <con:entry key="newPassword" value="newPassword"/>
+  <con:entry key="sessionId" value="sessionId"/>
+  <con:entry key="secretQuestionCode" value="55555555"/>
+  <con:entry key="phoneNumber" value="1133333333"/>
+  <con:entry key="pin" value="4454544545"/>
   <con:entry key="requesTime" value="11222222"/>
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="secretQuestionAnswer" value="answer"/>
-  <con:entry key="newPassword" value="newPassword"/>
-  <con:entry key="sessionId" value="sessionId"/>
-  <con:entry key="secretQuestionCode" value="55555555"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>pin</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>newPassword</con:entry><con:entry>sessionId</con:entry><con:entry>customerPreferedLanguage</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="changeRegisPIN" path="/changeRegisPIN" id="1566fe9e-41d5-47fb-ab1e-885ceda5d30c"><con:description>this service allows users to change the registration PIN used by a user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>oldPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="changeRegisPIN" id="331157b2-7c7c-4fa6-93e3-012a02deaf10" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="changeRegisPINRequest" id="0807560c-915c-4a41-ada8-1e61b80a78b1" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/changeRegisPIN</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>pin</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>sessionId</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>newPassword</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="changeRegisPIN" path="/changeRegisPIN" id="1566fe9e-41d5-47fb-ab1e-885ceda5d30c"><con:description>this service allows users to change the registration PIN used by a user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>oldPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="changeRegisPIN" id="331157b2-7c7c-4fa6-93e3-012a02deaf10" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="changeRegisPINRequest" id="0807560c-915c-4a41-ada8-1e61b80a78b1" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/changeRegisPIN</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="12255668"/>
   <con:entry key="institutionId" value="112333"/>
@@ -156,7 +156,7 @@
   <con:entry key="sessionId" value="4544545454"/>
   <con:entry key="login" value="hicham"/>
   <con:entry key="newPin" value="778787"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>oldPin</con:entry><con:entry>newPin</con:entry><con:entry>login</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotRegisPin" path="/forgotRegisPin" id="0876a1d4-29d1-4086-9e2e-7fa7b6ee7cb8"><con:description>this service allows users to regenerate the registration PIN used by a user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cusIden</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotRegisPin" id="7135c2a1-0cea-48c5-85fc-78d8045c8f34" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotRegisPinRequest" id="d0234045-3afc-49c5-9753-85113c6bff81" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotRegisPin</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>newPin</con:entry><con:entry>login</con:entry><con:entry>sessionId</con:entry><con:entry>oldPin</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="forgotRegisPin" path="/forgotRegisPin" id="0876a1d4-29d1-4086-9e2e-7fa7b6ee7cb8"><con:description>this service allows users to regenerate the registration PIN used by a user</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>appPlateform</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appVersion</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>appType</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>institutionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>requesTime</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>customerPreferedLanguage</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>phoneNumber</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cusIden</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>newPin</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>login</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>password</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionCode</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>secretQuestionAnswer</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>sessionId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="forgotRegisPin" id="7135c2a1-0cea-48c5-85fc-78d8045c8f34" method="POST"><con:settings><con:setting id="RecordResponseRepresentations">false</con:setting></con:settings><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="forgotRegisPinRequest" id="d0234045-3afc-49c5-9753-85113c6bff81" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotRegisPin</con:originalUri><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="cusIden" value="11124445"/>
   <con:entry key="institutionId" value="112333333"/>
@@ -171,7 +171,7 @@
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="secretQuestionAnswer" value="answer"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>cusIden</con:entry><con:entry>newPin</con:entry><con:entry>login</con:entry><con:entry>password</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="63214f97-ba7c-4c92-8ccf-f99c0555a85e" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="581533f1-29ed-48ff-b663-347e6f074881" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="login - loginRequest" id="d329de66-3f45-4c29-8ed0-006b94f701ab"><con:settings/><con:config service="WS" resourcePath="/login" methodName="login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="login - loginRequest" id="cd09cdfe-6b08-4552-96a2-5a5b8044c141" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/login</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="055fcfe2-e4df-498d-939f-b365f5303ea4" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="6bfe7516-5bf1-45ff-8cb8-3e88cd20cc69" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber</con:entry><con:entry>cusIden</con:entry><con:entry>newPin</con:entry><con:entry>login</con:entry><con:entry>password</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>sessionId</con:entry><con:entry>appType</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="63214f97-ba7c-4c92-8ccf-f99c0555a85e" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="581533f1-29ed-48ff-b663-347e6f074881" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="login - loginRequest" id="d329de66-3f45-4c29-8ed0-006b94f701ab"><con:settings/><con:config service="WS" resourcePath="/login" methodName="login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="login - loginRequest" id="cd09cdfe-6b08-4552-96a2-5a5b8044c141" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/login</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="055fcfe2-e4df-498d-939f-b365f5303ea4" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="6bfe7516-5bf1-45ff-8cb8-3e88cd20cc69" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
 assert contentType == "application/json"</scriptText></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="ad358ee2-2869-4aa8-95fd-50254850978f" name="JsonPath Count ResponseCode"><con:configuration><path>$.responseCode</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="0c90f425-25bd-423c-acab-d69458b93b15" name="JsonPath Count ResponseTime"><con:configuration><path>$.responseDescription</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="password" value="passer"/>
   <con:entry key="appVersion" value="1.0"/>
@@ -250,16 +250,16 @@ assert contentType == "application/json"</scriptText></con:configuration></con:a
 assert contentType == "application/json"</scriptText></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="qrCodeData" value="5445454"/>
+  <con:entry key="phoneNumber" value=""/>
   <con:entry key="institutionId" value="45545454"/>
   <con:entry key="customerPreferedLanguage" value="1"/>
   <con:entry key="requesTime" value="454545445"/>
   <con:entry key="appType" value="1"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="cardCode" value="455454"/>
-  <con:entry key="phoneNumber " value="1455454"/>
   <con:entry key="sessionId" value="4445456"/>
   <con:entry key="login" value="hicham"/>
-</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>phoneNumber </con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry><con:entry>qrCodeData</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="getMySecretQuestion - getMySecretQuestion" id="c56d2bdc-7d3b-4a48-84dc-955ae5b718bb"><con:settings/><con:config service="WS" resourcePath="/getMySecretQuestion" methodName="getMySecretQuestion" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getMySecretQuestion - getMySecretQuestion" id="df7e23c9-5301-4ad0-be88-8f846a658568" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getMySecretQuestion</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="4fbe9f2e-7e13-4a9b-a051-b2f28c1117a1" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="30844d8e-59a3-4238-96e8-24a180d031f3" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
+</con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>cardCode</con:entry><con:entry>login</con:entry><con:entry>qrCodeData</con:entry><con:entry>sessionId</con:entry><con:entry>phoneNumber</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="getMySecretQuestion - getMySecretQuestion" id="c56d2bdc-7d3b-4a48-84dc-955ae5b718bb"><con:settings/><con:config service="WS" resourcePath="/getMySecretQuestion" methodName="getMySecretQuestion" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getMySecretQuestion - getMySecretQuestion" id="df7e23c9-5301-4ad0-be88-8f846a658568" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/getMySecretQuestion</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="4fbe9f2e-7e13-4a9b-a051-b2f28c1117a1" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="30844d8e-59a3-4238-96e8-24a180d031f3" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
 assert contentType == "application/json"</scriptText></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
   <con:entry key="phoneNumber" value="56556565656"/>
@@ -315,17 +315,17 @@ assert contentType == "application/json"</scriptText></con:configuration></con:a
 </con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>customerPreferedLanguage</con:entry><con:entry>oldPassword</con:entry><con:entry>newPassword</con:entry><con:entry>customerAgentId</con:entry><con:entry>sessionId</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="forgotPassword - forgotPasswordRequest" id="dd0d205b-caf0-4fe5-a6df-632ccb696790"><con:settings/><con:config service="WS" resourcePath="/forgotPassword" methodName="forgotPassword" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="forgotPassword - forgotPasswordRequest" id="b797cabf-0dee-4387-b026-37a5624e102a" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/forgotPassword</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="08c08e4e-7019-4974-8254-d67128116fb9" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="ae65a237-d0e5-4306-a13e-b7f4767209bd" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
 assert contentType == "application/json"</scriptText></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
-  <con:entry key="phoneNumber" value="1133333333"/>
   <con:entry key="institutionId" value="111222"/>
-  <con:entry key="pin" value="4454544545"/>
   <con:entry key="customerPreferedLanguage" value="1"/>
+  <con:entry key="newPassword" value="newPassword"/>
+  <con:entry key="sessionId" value="sessionId"/>
+  <con:entry key="secretQuestionCode" value="55555555"/>
+  <con:entry key="phoneNumber" value="1133333333"/>
+  <con:entry key="pin" value="4454544545"/>
   <con:entry key="requesTime" value="11222222"/>
   <con:entry key="appType" value="C"/>
   <con:entry key="appPlateform" value="ANDROID"/>
   <con:entry key="secretQuestionAnswer" value="answer"/>
-  <con:entry key="newPassword" value="newPassword"/>
-  <con:entry key="sessionId" value="sessionId"/>
-  <con:entry key="secretQuestionCode" value="55555555"/>
 </con:parameters><con:parameterOrder><con:entry>appPlateform</con:entry><con:entry>appVersion</con:entry><con:entry>appType</con:entry><con:entry>institutionId</con:entry><con:entry>requesTime</con:entry><con:entry>phoneNumber</con:entry><con:entry>pin</con:entry><con:entry>secretQuestionCode</con:entry><con:entry>secretQuestionAnswer</con:entry><con:entry>newPassword</con:entry><con:entry>sessionId</con:entry><con:entry>customerPreferedLanguage</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="changeRegisPIN - changeRegisPINRequest" id="e40a6428-aa09-4b68-b961-82f1dee77e64"><con:settings/><con:config service="WS" resourcePath="/changeRegisPIN" methodName="changeRegisPIN" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="changeRegisPIN - changeRegisPINRequest" id="0807560c-915c-4a41-ada8-1e61b80a78b1" mediaType="application/x-www-form-urlencoded" postQueryString="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">false</con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:originalUri>http://localhost/changeRegisPIN</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="36a3cde9-ee35-42ec-a6de-aa3447c7b4f3" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="cc3c9f0f-ae5d-425d-83a6-9634605ef545" name="Script Assertion"><con:configuration><scriptText>def contentType = messageExchange.responseHeaders['Content-Type'][0]
 assert contentType == "application/json"</scriptText></con:configuration></con:assertion><con:credentials><con:username xsi:nil="true"/><con:password xsi:nil="true"/><con:domain xsi:nil="true"/><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="appVersion" value="1.0"/>
@@ -556,7 +556,7 @@ def fillErrorResponse(response) {
 		}
 	}
 }
-return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)]]></con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseLogin":{"secretQuestion":{"key":"QjOPrv7","value":"Quel est votre animal pr\u00e9f\u00e9r\u00e9?"},"attempCounter":0,"lastName":"Ali","terminalNumber":null,"city":"Casablanca","postalCode":null,"language":"EN","type":"1","mcc":null,"deviceStatus":"NEW","photoUrl":"http://172.18.1.212:8082/mobile-web-services/users/11245544","countryCode":"MA","defaultCurrency":"MAD","id":"24801000100500","email":"h.zerouali@gmail.com","addAdr1":"Street zerktouni","addAdr2":"Maarif 2","institutionCurrencies":[{"curCode":"XOF","curDen":"SN","curDecimal":"455656989999"},{"curCode":"MAD","curDen":"MA","curDecimal":"455666666"}],"tokenLifeTime":"445445577878787","defaultAccount":"04801000100500840","services":["service1","service2","service3","service4","service5"],"firstName":"Ahmed","nationality":"Marocaine","phone":"00249520003699","pinEntryIndicator":true},"responseCode":"000","responseDescription":"approved or completed successfully"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getCards" method="POST" resourcePath="/getCards" id="6cdab086-345f-4845-a6bd-8f6052f14934"><con:settings/><con:defaultResponse>getCardsResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)]]></con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseLogin":{"secretQuestion":{"key":null,"value":null},"attempCounter":null,"lastName":null,"terminalNumber":null,"city":null,"postalCode":null,"language":null,"type":null,"mcc":null,"login":null,"deviceStatus":null,"photoUrl":null,"countryCode":null,"defaultCurrency":null,"id":null,"email":null,"addAdr1":null,"addAdr2":null,"institutionCurrencies":null,"tokenLifeTime":null,"defaultAccount":null,"services":null,"firstName":null,"nationality":null,"phone":null,"pinEntryIndicator":null},"responseCode":"307","responseDescription":"format error"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getCards" method="POST" resourcePath="/getCards" id="6cdab086-345f-4845-a6bd-8f6052f14934"><con:settings/><con:defaultResponse>getCardsResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
 // Here are few examples showing how to match based on path, query param, header and body
 
@@ -692,7 +692,7 @@ def fillErrorResponse(response) {
 		cards : null
 	}
 }
-return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)]]></con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","cards":[{"iden":"iden","domain":"domain","description":"description","cards":[{"cardCode":"cardCode","truncatedCardnumber":"truncatedCardnumber","name":"name","status":"status","expirydate":"expirydate","renew":"renew","opposed":"opposed"}]}],"responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getCardTrans" method="POST" resourcePath="/getCardTrans" id="7cf7377a-cac5-44f8-a708-c1c1b13330a0"><con:settings/><con:defaultResponse>getCardTransResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)]]></con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","cards":[],"responseCode":"307","responseDescription":"format error"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getCardTrans" method="POST" resourcePath="/getCardTrans" id="7cf7377a-cac5-44f8-a708-c1c1b13330a0"><con:settings/><con:defaultResponse>getCardTransResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
 // Here are few examples showing how to match based on path, query param, header and body
 
@@ -954,9 +954,6 @@ def sendError(response,code,description) {
 }
 
 def fillErrorResponse(response) {
-	response.with {
-		cards : null
-	}
 }
 return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getLocation" method="POST" resourcePath="/getLocation" id="f0e8925a-3843-4e57-ab28-7bc51fd03e86"><con:settings/><con:defaultResponse>getLocationResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
@@ -1010,33 +1007,91 @@ if( requestBody.contains("some data") )
     return "Response N"
 }
 */
-</con:dispatchPath><con:response name="getLocationResponse" id="82078c59-7efd-4eb0-8384-7e3d57b1e6ca" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq",
-   "locations": [ {
-      "type": "type",
-      "longitude": "longitude",
-      "latitude": "latitude",
-	  "agentIden": "agentIden",
-	  "agentName": "agentName",
-	  "agentPhone": "agentPhone",
-	  "brandIden": "brandIden",
-	  "brandCorpName": "brandCorpName",
-	  "brandInit": "brandInit",
-	  "attNum": "attNum",
-	  "attLabel": "attLabel",
-	  "posNum": "posNum",
-	  "posLabel" : "posLabel",
-	  "addr1": "addr1",
-	  "addr2": "addr2",
-	  "city": "city",
-	  "cityLabel":"cityLabel",
-	  "zipCode":"zipCode",
-	  "distance":"distance"
-   }]
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getLoyaltyPoint" method="POST" resourcePath="/getLoyaltyPoint" id="d51abf83-2b9f-4965-9e95-ffb9f15b9606"><con:settings/><con:defaultResponse>getLoyaltyPointResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+</con:dispatchPath><con:response name="getLocationResponse" id="82078c59-7efd-4eb0-8384-7e3d57b1e6ca" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script><![CDATA[log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq",locations : [])
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def lat = parameters.lat
+		def lon = parameters.lon
+		def login = parameters.login
+		def sessionId = parameters.sessionId
+		if(parametersLength > 11 || parametersLength < 11 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !lat || !lon || !login || !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion && (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				if(sessionId != "12345") {
+				   log.info sendError(response,101,"service not authorized")
+				}else { 
+					log.info "approved or completed successfully."  
+					response.with {
+						responseCode = "000"
+				     	responseDescription = "approved or completed successfully."
+				     	def location = new Expando(type: "type",longitude: "longitude",latitude: "latitude",agentIden: "agentIden",
+	                            agentName: "agentName",agentPhone: "agentPhone",brandIden: "brandIden",brandCorpName: "brandCorpName",
+	  					   brandInit: "brandInit",attNum: "attNum",attLabel: "attLabel",posNum: "posNum",posLabel : "posLabel",
+	  					   addr1: "addr1",addr2: "addr2",city: "city",cityLabel:"cityLabel",zipCode:"zipCode",distance:"distance")
+				          locations << location
+					}
+				}
+					    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+	response.with {
+		locations : null
+	}
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)]]></con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","locations":[{"type":"type","longitude":"longitude","latitude":"latitude","agentIden":"agentIden","agentName":"agentName","agentPhone":"agentPhone","brandIden":"brandIden","brandCorpName":"brandCorpName","brandInit":"brandInit","attNum":"attNum","attLabel":"attLabel","posNum":"posNum","posLabel":"posLabel","addr1":"addr1","addr2":"addr2","city":"city","cityLabel":"cityLabel","zipCode":"zipCode","distance":"distance"}],"responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getLoyaltyPoint" method="POST" resourcePath="/getLoyaltyPoint" id="d51abf83-2b9f-4965-9e95-ffb9f15b9606"><con:settings/><con:defaultResponse>getLoyaltyPointResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
 // Here are few examples showing how to match based on path, query param, header and body
 
@@ -1088,13 +1143,78 @@ if( requestBody.contains("some data") )
     return "Response N"
 }
 */
-</con:dispatchPath><con:response name="getLoyaltyPointResponse" id="b1a539db-7f47-4546-bf04-95d836b6be84" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq",
-   "loyaltyPoint":"loyaltyPoint"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/topUpCard" method="POST" resourcePath="/topUpCard" id="7a695fae-21d5-44a8-beb7-e426645c3fa2"><con:settings/><con:defaultResponse>topUpCardResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+</con:dispatchPath><con:response name="getLoyaltyPointResponse" id="b1a539db-7f47-4546-bf04-95d836b6be84" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def cardCode = parameters.cardCode
+		def login = parameters.login
+		if(parametersLength > 9 || parametersLength &lt; 9 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !cardCode || !login){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				     loyaltyPoints = 12546666
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+	response.loyaltyPoints = null
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully.","loyaltyPoints":12546666}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/topUpCard" method="POST" resourcePath="/topUpCard" id="7a695fae-21d5-44a8-beb7-e426645c3fa2"><con:settings/><con:defaultResponse>topUpCardResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
 // Here are few examples showing how to match based on path, query param, header and body
 
@@ -1146,12 +1266,78 @@ if( requestBody.contains("some data") )
     return "Response N"
 }
 */
-</con:dispatchPath><con:response name="topUpCardResponse" id="701c7588-456d-4722-aba8-fd526f1f5357" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getMySercretQuestion" method="POST" resourcePath="/getMySecretQuestion" id="950d631c-1327-4c31-9fa0-8e50fc65c236"><con:settings/><con:defaultResponse>getMySercretQuestionResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+</con:dispatchPath><con:response name="topUpCardResponse" id="701c7588-456d-4722-aba8-fd526f1f5357" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def cardCode = parameters.cardCode
+		def login = parameters.login
+		def qrCodeData = parameters.qrCodeData
+		def sessionId = parameters.sessionId
+		if(parametersLength > 11 || parametersLength &lt; 11 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !cardCode || !login || !qrCodeData || !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/getMySecretQuestion" method="POST" resourcePath="/getMySecretQuestion" id="950d631c-1327-4c31-9fa0-8e50fc65c236"><con:settings/><con:defaultResponse>getMySercretQuestionResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
 // Script dispatcher is used to select a response based on the incoming request.
 // Here are few examples showing how to match based on path, query param, header and body
 
@@ -1203,357 +1389,829 @@ if( requestBody.contains("some data") )
     return "Response N"
 }
 */
-</con:dispatchPath><con:response name="getMySercretQuestionResponse" id="f38e0da4-3976-4023-8f53-430873cd0da3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq",
-   "mySecretQuestion": {
-      "key": "QjOPrv7",
-      "value": "Quel est votre animal préféré?"
-   }
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotUserName" method="POST" resourcePath="/forgotUserName" id="e081ab94-722b-4ae0-b2f0-67c1b960f985"><con:settings/><con:defaultResponse>forgotUserNameResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="forgotUserNameResponse" id="902d08de-e5bb-4eea-b0ee-a2fc14bc176b" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq",
-   "login":"login"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/updateCustomerAgent" method="POST" resourcePath="/updateCustomerAgent" id="eec37e21-f16d-4575-9e3c-359836f011f1"><con:settings/><con:defaultResponse>updateCustomerAgentResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="updateCustomerAgentResponse" id="43440195-7022-42cf-a7ff-96d9bcf5a0b7" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/changePassword" method="POST" resourcePath="/changePassword" id="15c868b1-9e72-4525-b498-6435e82302f5"><con:settings/><con:defaultResponse>changePasswordResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="changePasswordResponse" id="e431e954-f83c-4af3-b4d8-09e0e7321cb7" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotPassword" method="POST" resourcePath="/forgotPassword" id="d28ff944-65af-43c0-bcda-47263a3361f2"><con:settings/><con:defaultResponse>forgotPasswordResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="forgotPasswordResponse" id="25abe19f-787a-4ae2-a2a2-d4f10603e50e" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/changeRegisPIN" method="POST" resourcePath="/changeRegisPIN" id="3152972a-6f08-4a69-b09f-c809011e0028"><con:settings/><con:defaultResponse>changeRegisPINResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="changeRegisPINResponse" id="407832c8-371d-4fe8-a230-5777621af6ad" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
-}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotRegisPIN" method="POST" resourcePath="/forgotRegisPin" id="fb6390aa-8454-4d1c-a3bb-9d5d9da10451"><con:settings/><con:defaultResponse>forgotRegisPINResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
-// Script dispatcher is used to select a response based on the incoming request.
-// Here are few examples showing how to match based on path, query param, header and body
-
-// Match based on path
-def requestPath = mockRequest.getPath()
-log.info "Path: "+ requestPath
-
-if( requestPath.contains("json") )
-{
-    // return the name of the response you want to dispatch
-    return "JSON Response"
-}
-
-
-// Match based on query parameter
-def queryString = mockRequest.getRequest().getQueryString()
-log.info "QueryString: " + queryString
-
-if( queryString.contains("stockholm") )
-{
-    // return the name of the response you want to dispatch
-    return "Response Stockholm"
-}
-else if( queryString.contains("london") )
-{
-    // return the name of the response you want to dispatch
-    return "Response London"
-}
-
-
-// Match based on header
-def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
-log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
-
-if( acceptEncodingHeaderList.contains("gzip,deflate") )
-{
-    // return the name of the response you want to dispatch
-    return "GZiped Response"
-}
-
-
-// Match based on body
-def requestBody = mockRequest.getRequestContent()
-log.info "Request body: " + requestBody
-
-if( requestBody.contains("some data") )
-{
-    // return the name of the response you want to dispatch
-    return "Response N"
-}
-*/
-</con:dispatchPath><con:response name="forgotRegisPINResponse" id="7330caf4-f150-42c8-ab53-7d851c16e267" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
-   "responseCode": "000",
-   "responseDescription": "approved or completed successfully",
-   "responseTime": "190615101430630",
-   "responseReference": "HYyLxUnVhY4Ae3Lq"
+</con:dispatchPath><con:response name="getMySecretQuestionResponse" id="f38e0da4-3976-4023-8f53-430873cd0da3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		if(parametersLength > 7 || parametersLength &lt; 7 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully." 
+				     mySecretQuestion = new Expando(key: "QjOPrv7",value: "Quel est votre animal préféré?")
    
-}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+	response.mySecretQuestion = null
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully.","mySecretQuestion":{"key":"QjOPrv7","value":"Quel est votre animal pr\u00e9f\u00e9r\u00e9?"}}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotUserName" method="POST" resourcePath="/forgotUserName" id="e081ab94-722b-4ae0-b2f0-67c1b960f985"><con:settings/><con:defaultResponse>forgotUserNameResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="forgotUserNameResponse" id="902d08de-e5bb-4eea-b0ee-a2fc14bc176b" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def pin = parameters.pin
+		def secretQuestionCode = parameters.secretQuestionCode
+		def secretQuestionAnswer = parameters.secretQuestionAnswer
+		def sessionId = parameters.sessionId
+		if(parametersLength > 11 || parametersLength &lt; 11 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !pin || !secretQuestionCode || !secretQuestionAnswer
+			|| !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully"
+				     login = "hicham"  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+	response.login = null
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully","login":"hicham"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/updateCustomerAgent" method="POST" resourcePath="/updateCustomerAgent" id="eec37e21-f16d-4575-9e3c-359836f011f1"><con:settings/><con:defaultResponse>updateCustomerAgentResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="updateCustomerAgentResponse" id="43440195-7022-42cf-a7ff-96d9bcf5a0b7" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def customerAgentId = parameters.customerAgentId
+		def mail = parameters.mail
+		def address1 = parameters.address1
+		def city = parameters.city
+		def address2 = parameters.address2
+		def login = parameters.login
+		def sessionId = parameters.sessionId
+		def photoUrl = parameters.photoUrl
+		def pin = parameters.pin
+		if(parametersLength > 16 || parametersLength &lt; 16 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !customerAgentId || !mail || !address1 || !city
+			|| !address2 || !login || !sessionId || !photoUrl || !pin ){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/changePassword" method="POST" resourcePath="/changePassword" id="15c868b1-9e72-4525-b498-6435e82302f5"><con:settings/><con:defaultResponse>changePasswordResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="changePasswordResponse" id="e431e954-f83c-4af3-b4d8-09e0e7321cb7" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def customerAgentId = parameters.customerAgentId
+		def oldPassword = parameters.oldPassword
+		def newPassword = parameters.newPassword
+		def sessionId = parameters.sessionId
+		if(parametersLength > 11 || parametersLength &lt; 11 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !customerAgentId || !oldPassword 
+			|| !newPassword || !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotPassword" method="POST" resourcePath="/forgotPassword" id="d28ff944-65af-43c0-bcda-47263a3361f2"><con:settings/><con:defaultResponse>forgotPasswordResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="forgotPasswordResponse" id="25abe19f-787a-4ae2-a2a2-d4f10603e50e" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def pin = parameters.pin
+		def secretQuestionCode = parameters.secretQuestionCode
+		def secretQuestionAnswer = parameters.secretQuestionAnswer
+		def newPassword = parameters.newPassword
+		def sessionId = parameters.sessionId
+		if(parametersLength > 12 || parametersLength &lt; 12 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !pin || !secretQuestionCode 
+			|| !secretQuestionAnswer || !newPassword || !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"307","responseDescription":"format error"}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/changeRegisPIN" method="POST" resourcePath="/changeRegisPIN" id="3152972a-6f08-4a69-b09f-c809011e0028"><con:settings/><con:defaultResponse>changeRegisPINResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="changeRegisPINResponse" id="407832c8-371d-4fe8-a230-5777621af6ad" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def oldPin = parameters.oldPin
+		def newPin = parameters.newPin
+		def login = parameters.login
+		def sessionId = parameters.sessionId
+		if(parametersLength > 11 || parametersLength &lt; 11 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !oldPin || !newPin 
+			|| !login || !sessionId){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/forgotRegisPIN" method="POST" resourcePath="/forgotRegisPin" id="fb6390aa-8454-4d1c-a3bb-9d5d9da10451"><con:settings/><con:defaultResponse>forgotRegisPINResponse</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="forgotRegisPINResponse" id="7330caf4-f150-42c8-ab53-7d851c16e267" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:script>log.info " request path "+ mockRequest.path
+log.info " request method "+mockRequest.method
+log.info " request content-type "+mockRequest.request.contentType
+log.info " request content "+mockRequest.requestContent
+def response = new Expando(responseTime:"190615101430630",responseReference:"HYyLxUnVhY4Ae3Lq")
+def currentVersion = "1.0"
+try {
+	def contentType = mockRequest.request.contentType
+	if(contentType == "application/x-www-form-urlencoded") {
+		def parameters = [:]
+		def pairs = mockRequest.requestContent.split("\\&amp;");
+		def parametersLength = pairs.length 
+		0.upto(parametersLength-1,{
+			def fields = pairs[it].split("=");
+	   		def name = URLDecoder.decode(fields[0], "UTF-8");
+	   		parameters[name] = URLDecoder.decode(fields[1], "UTF-8");
+		})
+		parameters.each { log.info " request Parameter { $it.key : $it.value } " }
+		def appPlateform = parameters.appPlateform
+		def appVersion = parameters.appVersion
+		def appType = parameters.appType
+		def institutionId = parameters.institutionId
+		def requesTime = parameters.requesTime
+		def customerPreferedLanguage = parameters.customerPreferedLanguage
+		def phoneNumber = parameters.phoneNumber
+		def cusIden = parameters.cusIden
+		def password = parameters.password
+		def newPin = parameters.newPin
+		def login = parameters.login
+		def sessionId = parameters.sessionId
+		def secretQuestionCode = parameters.secretQuestionCode
+		def secretQuestionAnswer = parameters.secretQuestionAnswer
+		if(parametersLength > 14 || parametersLength &lt; 14 || !appPlateform || !appVersion || !appType || !institutionId 
+			|| !requesTime || !customerPreferedLanguage || !phoneNumber || !cusIden || !password || !newPin 
+			|| !login || !sessionId || !secretQuestionCode || !secretQuestionAnswer){
+			createFormatError(response)
+		}else {
+			if(appVersion == currentVersion &amp;&amp; (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
+				log.info "approved or completed successfully."  
+				response.with {
+					responseCode = "000"
+				     responseDescription = "approved or completed successfully."  
+				}    
+			}
+			else {
+				log.info sendError(response,"384","version not supported")
+				fillErrorResponse(response)
+			}
+		}
+	
+	}else {
+		createFormatError(response)
+	}
+}catch(e) {
+	log.info sendError(response,"196","system malfunction")
+	log.info e.message
+	fillErrorResponse(response)
+}
+
+def createFormatError(response) {
+	sendError(response,"307","format error")
+	fillErrorResponse(response)
+}
+
+def sendError(response,code,description) {
+	response.with {
+		responseCode = code
+		responseDescription = description
+	}
+	fillErrorResponse(response)
+	return description
+}
+
+def fillErrorResponse(response) {
+}
+return mockResponse.responseContent = groovy.json.JsonOutput.toJson(response)</con:script><con:responseContent>{"responseTime":"190615101430630","responseReference":"HYyLxUnVhY4Ae3Lq","responseCode":"000","responseDescription":"approved or completed successfully."}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
