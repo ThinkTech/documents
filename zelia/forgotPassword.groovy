@@ -34,10 +34,10 @@ try {
 			createFormatError(response)
 		}else {
 			if(appVersion == currentVersion && (appPlateform == "ANDROID" || appPlateform == "IOS") ) {
-				log.info "approved or completed successfully."
+				log.info "approved or completed successfully"
 				response.with {
 					responseCode = "000"
-					 responseDescription = "approved or completed successfully."
+					 responseDescription = "approved or completed successfully"
 				}
 			}
 			else {

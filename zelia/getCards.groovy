@@ -37,7 +37,7 @@ try {
 					log.info "approved or completed successfully"
 					response.with {
 						responseCode = "000"
-						 responseDescription = "approved or completed successfully."
+						 responseDescription = "approved or completed successfully"
 						 def program = new Expando(iden : "iden",domain : "domain",description : "description")
 						 program.cards = []
 						 program.cards << new Expando(cardCode : "cardCode",truncatedCardnumber : "truncatedCardnumber", name : "name",

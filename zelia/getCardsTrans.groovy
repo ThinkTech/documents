@@ -34,7 +34,7 @@ try {
 				log.info "approved or completed successfully"
 					response.with {
 						responseCode = "000"
-						 responseDescription = "approved or completed successfully."
+						 responseDescription = "approved or completed successfully"
 						 def transaction = new Expando(amount : "5000",sign : "D",label : "transaction 1",transDate : "12465688788")
 						 transaction.currency = new Expando(id:"5656654",label : "dirham", iden : "MAD")
 						 cardTrans << transaction

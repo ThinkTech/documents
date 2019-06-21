@@ -35,10 +35,10 @@ try {
 				if(sessionId != "12345") {
 				   log.info sendError(response,101,"service not authorized")
 				}else {
-					log.info "approved or completed successfully."
+					log.info "approved or completed successfully"
 					response.with {
 						responseCode = "000"
-						 responseDescription = "approved or completed successfully."
+						 responseDescription = "approved or completed successfully"
 						 def location = new Expando(type: "type",longitude: "longitude",latitude: "latitude",agentIden: "agentIden",
 								agentName: "agentName",agentPhone: "agentPhone",brandIden: "brandIden",brandCorpName: "brandCorpName",
 							 brandInit: "brandInit",attNum: "attNum",attLabel: "attLabel",posNum: "posNum",posLabel : "posLabel",
