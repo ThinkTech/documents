@@ -1083,7 +1083,7 @@ paths:
   /changeRegisPin:
     post:
       operationId: "changeRegisPin"
-      description : "this service allows users to change the registration PIN used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "this service allows users to change the registration pin used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1137,7 +1137,7 @@ paths:
   /forgotRegisPin:
     post:
       operationId: "forgotRegisPin"
-      description : "this service allows users to regenerate the registration PIN used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "this service allows users to regenerate the registration pin used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1403,7 +1403,7 @@ paths:
   /createPin:
     post:
       operationId: "createPin"
-      description: "this service allows end mobile users to register their PIN during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "this service allows end mobile users to register their pin during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
       parameters:
       - name: "appPlateform"
         in: formData
