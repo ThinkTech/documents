@@ -391,7 +391,7 @@ definitions:
            type: string
           value:
            type: string
-  getCheckTokenResponse:
+  checkTokenResponse:
     type: object
     properties:
       responseCode:
@@ -413,7 +413,7 @@ definitions:
       agentCustomerType:
         type: string
         enum: ["CUSTOMER","AGENT","DEVICE_NEW_SERIAL_NUMBER"]
-  getEnrollBankedResponse:
+  enrollBankedResponse:
     type: object
     properties:
       responseCode:
@@ -1329,7 +1329,7 @@ paths:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getCheckTokenResponse'
+            $ref: '#/definitions/checkTokenResponse'
   /enrollBankedCustomer:
     post:
       operationId: "enrollBankedCustomer"
@@ -1399,7 +1399,7 @@ paths:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getEnrollBankedResponse'
+            $ref: '#/definitions/enrollBankedResponse'
   /createPin:
     post:
       operationId: "createPin"
