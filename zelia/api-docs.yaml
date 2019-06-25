@@ -1400,10 +1400,10 @@ paths:
           description: returns a json response
           schema:
             $ref: '#/definitions/getEnrollBankedResponse'
-  /createPIN:
+  /createPin:
     post:
-      operationId: "createPIN"
-      description: "this service allows end mobile users to register their  PIN during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      operationId: "createPin"
+      description: "this service allows end mobile users to register their PIN during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
       parameters:
       - name: "appPlateform"
         in: formData
