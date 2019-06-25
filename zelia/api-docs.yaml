@@ -1,0 +1,1444 @@
+---
+swagger: "2.0"
+info:
+  title: "Zelia WS"
+  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced and consumed"
+  termsOfService: "https://s2mworldwide.com/terms/"
+  contact:
+    name: "S2M Support"
+    url: "https://s2mworldwide.com/support"
+    email: "support@s2m.ma" 
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  version: "1.0"
+host : "10.0.0.169:8080"
+basePath: "/v1"
+schemes : [http]
+consumes:
+  - application/x-www-form-urlencoded
+produces:
+  - application/json
+definitions:
+  loginResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      responseLogin:
+        type: object
+        properties:
+         phone:
+          type: string
+         id:
+          type: string
+         language:
+          type: string
+         secretQuestion:
+          type: object
+          properties:
+            key:
+             type: string
+            value:
+              type: string
+         addAdr1:
+          type: string
+         addAdr2:
+          type: string
+         postalCode:
+          type: string
+         city:
+          type: string
+         countryCode:
+          type: string
+         mcc:
+          type: string
+         firstName:
+          type: string
+         lastName:
+          type: string
+         email:
+          type: string
+         nationality:
+          type: string
+         defaultAccount:
+          type: string
+         defaultCurrency:
+          type: string
+         attemptCounter:
+          type: string
+         pinEntryIndicator:
+          type: string
+         deviceStatus:
+          type: string
+         terminalNumber:
+          type: string
+         login:
+          type: string
+         photUrl:
+          type: string
+         tokenLifetime:
+          type: string
+         institutionCurrencies:
+          type: array
+          items:
+           type : object
+           properties:
+            curCode:
+             type: string
+            curIden:
+              type: string
+            curDecimal:
+              type: string
+         services:
+          type: array
+          items:
+           type : string
+  getCardsResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      cards:
+        type: array
+        items:
+         type: object
+         properties: 
+          iden:
+            type: string
+          domain:
+            type: string
+          description:
+            type: string
+          cards:
+            type: array
+            items:
+             type: object
+             properties:
+              cardCode:
+               type: string
+              truncatedCardNumber:
+               type: string
+              name:
+               type: string
+              status:
+               type: string
+              expirydate:
+               type: string
+              renew:
+               type: string
+              opposed:
+               type: string
+  getCardTransResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      cardTrans:
+        type: array
+        items:
+         type: object
+         properties:
+          amount:
+           type: string
+          sign:
+           type: string
+          currency:
+           type: object
+           properties:
+            id:
+             type: string
+            label:
+             type: string
+            iden:
+             type: string
+          label:
+           type: string
+          transDate:
+           type: string
+  updateCardResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  getLocationResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      locations:
+        type: array
+        items:
+         type: object
+         properties:
+           type:
+            type: string
+           longitude:
+            type: string
+           latitude:
+            type: string
+           agentIden:
+            type: string
+           agentName:
+            type: string
+           agentPhone:
+            type: string
+           branchIden:
+            type: string
+           branchCorpName:
+            type: string
+           branchInit:
+            type: string
+           attNum:
+            type: string
+           attLabel:
+            type: string
+           posNum:
+            type: string
+           posLabel:
+            type: string
+           addr1:
+            type: string
+           addr2:
+            type: string
+           city:
+            type: string
+           cityLabel:
+            type: string
+           zipCode:
+            type: string
+           distance:
+            type: string
+  getLoyaltyPointResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      loyalPoints:
+        type : string
+  topUpCardResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  getMySecretQuestionResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      mySecretQuestion:
+        type: object
+        properties:
+         key:
+          type: string
+         value:
+          type: string
+  forgotUserNameResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      login:
+        type: string
+  updateCustomerAgentResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  changePasswordResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  forgotPasswordResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  changeRegisPinResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  forgotRegisPinResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  getOperationReasonsResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      reasonList:
+        type: array
+        items:
+         type: object
+         properties:
+          reasonCode:
+           type: string
+          reasonIden:
+           type: string
+          reasonLabel:
+           type: string
+  getSecretQuestionsResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      questionsList:
+        type: array
+        items:
+         type: object
+         properties:
+          key:
+           type: string
+          value:
+           type: string
+  getCheckTokenResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+      title:
+        type: string
+      name:
+        type: string
+      mail:
+        type: string
+      customerAgentIden:
+        type: string
+      agentCustomerType:
+        type: string
+        enum: ["CUSTOMER","AGENT","DEVICE_NEW_SERIAL_NUMBER"]
+  getEnrollBankedResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+  createPinResponse:
+    type: object
+    properties:
+      responseCode:
+        type: string
+      responseDescription:
+        type: string
+      responseTime:
+        type: string
+      responseReference:
+        type: string
+paths:
+  /login:
+    post:
+      operationId: "login"
+      description : "this service allows users to authenticate in the application and retrieve account data. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: string
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "serialNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: string
+      - name: "password"
+        in: formData
+        required: true
+        type: string
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/loginResponse'
+  /getCards:
+    post:
+      operationId: "getCards"
+      description : "this service allows users to get a list of cards. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getCardsResponse'
+  /getCardTrans:
+    post:
+      operationId: "getCardTrans"
+      description : "this service allows users to get card transactions. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "cardCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getCardTransResponse'
+  /updateCard:
+    post:
+      operationId: "updateCard"
+      description : "this service allows users to update a card status. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "operation"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "cardCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "motifCode"
+        in: formData
+        required: false
+        type: "string"
+      - name: "motifIden"
+        in: formData
+        required: false
+        type: "string"
+      - name: "motifLabel"
+        in: formData
+        required: false
+        type: "string"
+      - name: "pin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/updateCardResponse'
+  /getLocation:
+    post:
+      operationId: "getLocation"
+      description : "this service allows users to get a list of branch, atm and agents from a geographic coordinates. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "lat"
+        in: formData
+        required: true
+        type: "string"
+      - name: "lon"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getLocationResponse'
+  /getLoyaltyPoint:
+    post:
+      operationId: "getLoyaltyPoint"
+      description : "this service allows users to get a list of branch, atm and agents from a geographic coordinates. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "cardCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getLoyaltyPointResponse'
+  /topUpCard:
+    post:
+      operationId: "topUpCard"
+      description : "this service allows users to top up a card. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: false
+        type: "string"
+      - name: "cardCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "qrCodeData"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/topUpCardResponse'
+  /getMySecretQuestion:
+    post:
+      operationId: "getMySecretQuestion"
+      description : "this service allows users to  get questions list to register. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getMySecretQuestionResponse'
+  /forgotUserName:
+    post:
+      operationId: "forgotUserName"
+      description : "this service allows users to regenerate a username. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "pin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionAnswer"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/forgotUserNameResponse'
+  /updateCustomerAgent:
+    post:
+      operationId: "updateCustomerAgent"
+      description : "this service allows users to update customer and agent informations. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerAgentId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "mail"
+        in: formData
+        required: true
+        type: "string"
+      - name: "address1"
+        in: formData
+        required: true
+        type: "string"
+      - name: "city"
+        in: formData
+        required: true
+        type: "string"
+      - name: "address2"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "photoUrl"
+        in: formData
+        required: false
+        type: "string"
+      - name: "pin"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/updateCustomerAgentResponse'
+  /changePassword:
+    post:
+      operationId: "changePassword"
+      description : "this service allows users to change the password. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "oldPassword"
+        in: formData
+        required: true
+        type: "string"
+      - name: "newPassword"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerAgentId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/changePasswordResponse'
+  /forgotPassword:
+    post:
+      operationId: "forgotPassword"
+      description : "this service allows users to regenerate a new password. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "pin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionAnswer"
+        in: formData
+        required: true
+        type: "string"
+      - name: "newPassword"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+       200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/forgotPasswordResponse'
+  /changeRegisPin:
+    post:
+      operationId: "changeRegisPin"
+      description : "this service allows users to change the registration PIN used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "oldPin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "newPin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/changeRegisPinResponse'
+  /forgotRegisPin:
+    post:
+      operationId: "forgotRegisPin"
+      description : "this service allows users to regenerate the registration PIN used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "cusIden"
+        in: formData
+        required: true
+        type: "string"
+      - name: "password"
+        in: formData
+        required: true
+        type: "string"
+      - name: "newPin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionAnswer"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/forgotRegisPinResponse'
+  /getOperationReasons:
+    post:
+      operationId: "getOperationReasons"
+      description: "this service allows users to get the list of card operation reasons. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "sessionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerIden"
+        in: formData
+        required: true
+        type: "string"
+      - name: "cardOperation"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getOperationReasonsResponse'
+  /getSecretQuestions:
+    post:
+      operationId: "getSecretQuestions"
+      description: "this service allows users to get the list of questions tu use at the enrollement. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getSecretQuestionsResponse'
+  /checkToken:
+    post:
+      operationId: "checkToken"
+      description: "this service allows to check the customer token (enrollment token, change device...) by the mobile server and retrieves the customer data. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "token"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerAgentId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getCheckTokenResponse'
+  /enrollBankedCustomer:
+    post:
+      operationId: "enrollBankedCustomer"
+      description: "this service allows users to enroll banked mobile customer. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "login"
+        in: formData
+        required: true
+        type: "string"
+      - name: "password"
+        in: formData
+        required: true
+        type: "string"
+      - name: "email"
+        in: formData
+        required: false
+        type: "string"
+      - name: "secretQuestionCode"
+        in: formData
+        required: true
+        type: "string"
+      - name: "secretQuestionAnswer"
+        in: formData
+        required: true
+        type: "string"
+      - name: "photoUrl"
+        in: formData
+        required: false
+        type: "string"
+      - name: "identificationUrl"
+        in: formData
+        required: false
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      - name: "serialNumber"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/getEnrollBankedResponse'
+  /createPIN:
+    post:
+      operationId: "createPIN"
+      description: "this service allows end mobile users to register their  PIN during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      parameters:
+      - name: "appPlateform"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appVersion"
+        in: formData
+        required: true
+        type: "string"
+      - name: "appType"
+        in: formData
+        required: true
+        type: "string"
+      - name: "institutionId"
+        in: formData
+        required: true
+        type: "string"
+      - name: "requesTime"
+        in: formData
+        required: true
+        type: "string"
+      - name: "phoneNumber"
+        in: formData
+        required: true
+        type: "string"
+      - name: "newPin"
+        in: formData
+        required: true
+        type: "string"
+      - name: "customerPreferedLanguage"
+        in: formData
+        required: true
+        type: "string"
+      responses:
+        200: 
+          description: returns a json response
+          schema:
+            $ref: '#/definitions/createPinResponse'
