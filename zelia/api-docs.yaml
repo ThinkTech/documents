@@ -45,7 +45,7 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       responseLogin:
         type: object
         properties:
@@ -151,6 +151,12 @@ definitions:
           items:
            type : string
            description: "the name of the service"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - responseLogin
   CardsResponse:
     type: object
     properties:
@@ -175,7 +181,7 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       cards:
         type: array
         description: "the list of the user cards"
@@ -218,6 +224,12 @@ definitions:
               opposed:
                type: string
                description: "the value must be true or false"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - cards
   CardTransResponse:
     type: object
     properties:
@@ -241,7 +253,7 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       cardTrans:
         type: array
         description: "the list of the transactions"
@@ -272,6 +284,12 @@ definitions:
           transDate:
            type: string
            description: "transaction date"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - cardTrans
   CardResponse:
     type: object
     properties:
@@ -296,7 +314,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   LocationResponse:
     type: object
     properties:
@@ -385,6 +408,12 @@ definitions:
            distance:
             type: string
             description: "the location distance"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - locations
   LoyaltyPointResponse:
     type: object
     properties:
@@ -408,10 +437,16 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       loyaltyPoints:
         type : string
         description: "the customer loyalty points"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - loyaltyPoints
   TopUpCardResponse:
     type: object
     properties:
@@ -435,7 +470,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   MySecretQuestionResponse:
     type: object
     properties:
@@ -472,6 +512,12 @@ definitions:
          value:
           type: string
           description: "the secret question value"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - mySecretQuestion
   ForgotUserNameResponse:
     type: object
     properties:
@@ -499,10 +545,16 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       login:
         type: string
         description: "the customer login"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - login
   UpdateCustomerAgentResponse:
     type: object
     properties:
@@ -529,7 +581,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   ChangePasswordResponse:
     type: object
     properties:
@@ -563,6 +620,11 @@ definitions:
       responseReference:
         type: string
         description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   ForgotPasswordResponse:
     type: object
     properties:
@@ -591,7 +653,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   ChangeRegisPinResponse:
     type: object
     properties:
@@ -623,6 +690,11 @@ definitions:
       responseReference:
         type: string
         description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   ForgotRegisPinResponse:
     type: object
     properties:
@@ -654,7 +726,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   OperationReasonsResponse:
     type: object
     properties:
@@ -695,6 +772,12 @@ definitions:
           reasonLabel:
            type: string
            description: "the operation reason label"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - reasonList
   SecretQuestionsResponse:
     type: object
     properties:
@@ -720,7 +803,7 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       questionsList:
         type: array
         description: "the list of the secret questions"
@@ -733,6 +816,12 @@ definitions:
           value:
            type: string
            description: "the secret question value"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - questionsList
   CheckTokenResponse:
     type: object
     properties:
@@ -762,7 +851,7 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
       title:
         type: string
         description: "the user title"
@@ -779,6 +868,15 @@ definitions:
         type: string
         description: "the possible values are \n \ 
         CUSTOMER, AGENT, DEVICE_NEW_SERIAL_NUMBER"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
+     - title
+     - name
+     - customerAgentIden
+     - agentCustomerType
   EnrollBankedResponse:
     type: object
     properties:
@@ -803,7 +901,12 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
   CreatePinResponse:
     type: object
     properties:
@@ -828,12 +931,17 @@ definitions:
         description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-        description : "the response reference"
+        description: "the response reference"
+    required:
+     - responseCode
+     - responseDescription
+     - responseTime
+     - responseReference
 paths:
   /login:
     post:
       operationId: "login"
-      description : "This service allows users to authenticate in the application and to retrieve their account data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to authenticate in the application and to retrieve their account data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -844,7 +952,7 @@ paths:
         in: formData
         required: true
         type: string
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -854,7 +962,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -864,17 +972,17 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the serial number"
+        description: "the serial number"
       - name: "login"
         in: formData
         required: true
         type: string
-        description : "the user login"
+        description: "the user login"
       - name: "password"
         in: formData
         required: true
         type: string
-        description : "the user password"
+        description: "the user password"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -888,7 +996,7 @@ paths:
   /getCards:
     post:
       operationId: "getCards"
-      description : "This service allows users to get a list of cards. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to get a list of cards. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -899,7 +1007,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -909,7 +1017,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -924,7 +1032,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "login"
         in: formData
         required: true
@@ -934,7 +1042,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -943,7 +1051,7 @@ paths:
   /getCardTrans:
     post:
       operationId: "getCardTrans"
-      description : "This service allows users to get a card transactions. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to get a card transactions. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -954,7 +1062,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -964,7 +1072,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -979,22 +1087,22 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
-        description : "the user card code"
+        description: "the user card code"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -1003,7 +1111,7 @@ paths:
   /updateCard:
     post:
       operationId: "updateCard"
-      description : "This service allows users to update a card status. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to update a card status. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1014,7 +1122,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1024,7 +1132,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1039,47 +1147,47 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "operation"
         in: formData
         required: true
         type: "string"
-        description : "the value must be ACTIVE or BLOCKED"
+        description: "the value must be ACTIVE or BLOCKED"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
-        description : "the user card code"
+        description: "the user card code"
       - name: "motifCode"
         in: formData
         required: false
         type: "string"
-        description : "the user card motif code"
+        description: "the user card motif code"
       - name: "motifIden"
         in: formData
         required: false
         type: "string"
-        description : "the user card motif iden"
+        description: "the user card motif iden"
       - name: "motifLabel"
         in: formData
         required: false
         type: "string"
-        description : "the user card motif label"
+        description: "the user card motif label"
       - name: "pin"
         in: formData
         required: true
         type: "string"
-        description : "the user card pin"
+        description: "the user card pin"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       responses:
         200: 
           description: returns a json response
@@ -1088,7 +1196,7 @@ paths:
   /getLocation:
     post:
       operationId: "getLocation"
-      description : "This service allows users to get a list of branchs, atms and agents from a geographic coordinates. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
+      description: "This service allows users to get a list of branchs, atms and agents from a geographic coordinates. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1099,7 +1207,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1109,7 +1217,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1124,27 +1232,27 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "lat"
         in: formData
         required: true
         type: "string"
-        description : "the location latitude"
+        description: "the location latitude"
       - name: "lon"
         in: formData
         required: true
         type: "string"
-        description : "the location longitude"
+        description: "the location longitude"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "login"
         in: formData
         required: false
         type: "string"
-        description : "the user login"
+        description: "the user login"
       responses:
         200: 
           description: returns a json response
@@ -1153,7 +1261,7 @@ paths:
   /getLoyaltyPoint:
     post:
       operationId: "getLoyaltyPoint"
-      description : "This service allows users to get their loyalty points. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to get their loyalty points. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1164,7 +1272,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1174,7 +1282,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1189,17 +1297,17 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
-        description : "the user card code"
+        description: "the user card code"
       - name: "login"
         in: formData
         required: false
         type: "string"
-        description : "the user login"
+        description: "the user login"
       responses:
         200: 
           description: returns a json response
@@ -1208,7 +1316,7 @@ paths:
   /topUpCard:
     post:
       operationId: "topUpCard"
-      description : "This service allows users to top up a card. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to top up a card. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1219,7 +1327,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1229,7 +1337,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1244,27 +1352,27 @@ paths:
         in: formData
         required: false
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
-        description : "the user card code"
+        description: "the user card code"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "qrCodeData"
         in: formData
         required: true
         type: "string"
-        description : "the user card QR code data"
+        description: "the user card QR code data"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -1273,7 +1381,7 @@ paths:
   /getMySecretQuestion:
     post:
       operationId: "getMySecretQuestion"
-      description : "This service allows users to get a list of questions to register. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
+      description: "This service allows users to get a list of questions to register. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1284,7 +1392,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1294,7 +1402,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1304,7 +1412,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1318,7 +1426,7 @@ paths:
   /forgotUserName:
     post:
       operationId: "forgotUserName"
-      description : "This service allows users to regenerate a username. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to regenerate a username. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1329,7 +1437,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1339,7 +1447,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1349,22 +1457,22 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "pin"
         in: formData
         required: true
         type: "string"
-        description : "the user pin card"
+        description: "the user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
-        description : "the secret question code"
+        description: "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
-        description : "the secret question answer"
+        description: "the secret question answer"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1374,7 +1482,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -1383,7 +1491,7 @@ paths:
   /updateCustomerAgent:
     post:
       operationId: "updateCustomerAgent"
-      description : "This service allows users to update their information. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to update their information. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1394,7 +1502,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1404,7 +1512,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1419,52 +1527,52 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
-        description : "the user identifier"
+        description: "the user identifier"
       - name: "mail"
         in: formData
         required: true
         type: "string"
-        description : "the user email"
+        description: "the user email"
       - name: "address1"
         in: formData
         required: true
         type: "string"
-        description : "the user first address"
+        description: "the user first address"
       - name: "city"
         in: formData
         required: true
         type: "string"
-        description : "the user city"
+        description: "the user city"
       - name: "address2"
         in: formData
         required: true
         type: "string"
-        description : "the user second address"
+        description: "the user second address"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "photoUrl"
         in: formData
         required: false
         type: "string"
-        description : "the user photo url"
+        description: "the user photo url"
       - name: "pin"
         in: formData
         required: true
         type: "string"
-        description : "the user pin card"
+        description: "the user pin card"
       responses:
         200: 
           description: returns a json response
@@ -1473,7 +1581,7 @@ paths:
   /changePassword:
     post:
       operationId: "changePassword"
-      description : "This service allows users to change their password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to change their password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1484,7 +1592,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1494,7 +1602,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1504,7 +1612,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1514,22 +1622,22 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user old password"
+        description: "the user old password"
       - name: "newPassword"
         in: formData
         required: true
         type: "string"
-        description : "the user new password"
+        description: "the user new password"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
-        description : "the user identifier"
+        description: "the user identifier"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -1538,7 +1646,7 @@ paths:
   /forgotPassword:
     post:
       operationId: "forgotPassword"
-      description : "This service allows users to regenerate a new password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
+      description: "This service allows users to regenerate a new password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1549,7 +1657,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1559,7 +1667,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1569,32 +1677,32 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "pin"
         in: formData
         required: true
         type: "string"
-        description : "the user pin card"
+        description: "the user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
-        description : "the secret question code"
+        description: "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
-        description : "the secret question answer"
+        description: "the secret question answer"
       - name: "newPassword"
         in: formData
         required: true
         type: "string"
-        description : "the user new password"
+        description: "the user new password"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1608,7 +1716,7 @@ paths:
   /changeRegisPin:
     post:
       operationId: "changeRegisPin"
-      description : "This service allows users to change their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
+      description: "This service allows users to change their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1619,7 +1727,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1629,7 +1737,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1644,27 +1752,27 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "oldPin"
         in: formData
         required: true
         type: "string"
-        description : "the user old pin card"
+        description: "the user old pin card"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
-        description : "the user new pin card"
+        description: "the user new pin card"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       responses:
         200: 
           description: returns a json response
@@ -1673,7 +1781,7 @@ paths:
   /forgotRegisPin:
     post:
       operationId: "forgotRegisPin"
-      description : "This service allows users to regenerate their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
+      description: "This service allows users to regenerate their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
@@ -1684,7 +1792,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1694,7 +1802,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1709,42 +1817,42 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user phone number"
+        description: "the user phone number"
       - name: "cusIden"
         in: formData
         required: true
         type: "string"
-        description : "the customer identifier"
+        description: "the customer identifier"
       - name: "password"
         in: formData
         required: true
         type: "string"
-        description : "the user password"
+        description: "the user password"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
-        description : "the user new pin card"
+        description: "the user new pin card"
       - name: "login"
         in: formData
         required: true
         type: "string"
-        description : "the user login"
+        description: "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
-        description : "the secret question code"
+        description: "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
-        description : "the secret question answer"
+        description: "the secret question answer"
       responses:
         200: 
           description: returns a json response
@@ -1764,7 +1872,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1774,7 +1882,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1789,12 +1897,12 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user session identifier"
+        description: "the user session identifier"
       - name: "customerIden"
         in: formData
         required: true
         type: "string"
-        description : "the customer identifier"
+        description: "the customer identifier"
       - name: "cardOperation"
         in: formData
         required: true
@@ -1819,7 +1927,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1829,7 +1937,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1839,7 +1947,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1864,7 +1972,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1874,22 +1982,22 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "token"
         in: formData
         required: true
         type: "string"
-        description : "the request token"
+        description: "the request token"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
-        description : "the user identifier"
+        description: "the user identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1919,7 +2027,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -1929,7 +2037,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -1939,42 +2047,42 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "login"
         in: formData
         required: true
-        description : "the user login"
+        description: "the user login"
         type: "string"
       - name: "password"
         in: formData
         required: true
         type: "string"
-        description : "the user password"
+        description: "the user password"
       - name: "email"
         in: formData
         required: false
         type: "string"
-        description : "the user email"
+        description: "the user email"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
-        description : "the secret question code"
+        description: "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
-        description : "the secret question answer"
+        description: "the secret question answer"
       - name: "photoUrl"
         in: formData
         required: false
         type: "string"
-        description : "the user photo url"
+        description: "the user photo url"
       - name: "identificationUrl"
         in: formData
         required: false
         type: "string"
-        description : "the user identification url"
+        description: "the user identification url"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
@@ -1984,7 +2092,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the serial number"
+        description: "the serial number"
       responses:
         200: 
           description: returns a json response
@@ -2004,7 +2112,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the application version"
+        description: "the application version"
       - name: "appType"
         in: formData
         required: true
@@ -2014,7 +2122,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the institution identifier"
+        description: "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
@@ -2024,12 +2132,12 @@ paths:
         in: formData
         required: true
         type: "string"
-        description : "the user mobile number"
+        description: "the user mobile number"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
-        description : "the user new pin card"
+        description: "the user new pin card"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
