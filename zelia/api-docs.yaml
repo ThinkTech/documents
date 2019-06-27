@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   title: "Zelia WS"
-  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced by the mobile server and consumed by the mobile application [ ANDROID, IOS ]"
+  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced by the mobile server and consumed by the mobile application [ ANDROID, IOS ]. The initial version [ 1.0 ] of the specification was released on 29/05/2019 and its current version [ 1.1 ] on 24/06/2019"
   termsOfService: "https://s2mworldwide.com/services/terms"
   contact:
     name: "S2M"
@@ -941,6 +941,7 @@ paths:
   /login:
     post:
       operationId: "login"
+      summary: "[ login service ]"
       description: "This service allows users to authenticate in the application and to retrieve their account data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -996,6 +997,7 @@ paths:
   /getCards:
     post:
       operationId: "getCards"
+      summary: "[ getCards service ]"
       description: "This service allows users to get a list of cards. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1051,6 +1053,7 @@ paths:
   /getCardTrans:
     post:
       operationId: "getCardTrans"
+      summary: "[ getCardTrans service ]"
       description: "This service allows users to get a card transactions. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1111,6 +1114,7 @@ paths:
   /updateCard:
     post:
       operationId: "updateCard"
+      summary: "[ updateCard service ]"
       description: "This service allows users to update a card status. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1182,7 +1186,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user card pin"
+        description: "the hashed user card pin"
       - name: "phoneNumber"
         in: formData
         required: true
@@ -1196,6 +1200,7 @@ paths:
   /getLocation:
     post:
       operationId: "getLocation"
+      summary: "[ getLocation service ]"
       description: "This service allows users to get a list of branchs, atms and agents from a geographic coordinates. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
@@ -1261,6 +1266,7 @@ paths:
   /getLoyaltyPoint:
     post:
       operationId: "getLoyaltyPoint"
+      summary: "[ getLoyaltyPoint service ]"
       description: "This service allows users to get their loyalty points. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1316,6 +1322,7 @@ paths:
   /topUpCard:
     post:
       operationId: "topUpCard"
+      summary: "[ topUpCard service ]"
       description: "This service allows users to top up a card. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1357,7 +1364,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user card code"
+        description: "the user technical card code"
       - name: "login"
         in: formData
         required: true
@@ -1381,6 +1388,7 @@ paths:
   /getMySecretQuestion:
     post:
       operationId: "getMySecretQuestion"
+      summary: "[ getMySecretQuestion service ]"
       description: "This service allows users to get a secret question. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
@@ -1426,6 +1434,7 @@ paths:
   /forgotUserName:
     post:
       operationId: "forgotUserName"
+      summary: "[ forgotUserName service ]"
       description: "This service allows users to regenerate a username. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1462,7 +1471,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user pin card"
+        description: "the hashed user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
@@ -1491,6 +1500,7 @@ paths:
   /updateCustomerAgent:
     post:
       operationId: "updateCustomerAgent"
+      summary: "[ updateCustomerAgent service ]"
       description: "This service allows users to update their information. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1572,7 +1582,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user pin card"
+        description: "the hashed user pin card"
       responses:
         200: 
           description: returns a json response
@@ -1581,6 +1591,7 @@ paths:
   /changePassword:
     post:
       operationId: "changePassword"
+      summary: "[ changePassword service ]"
       description: "This service allows users to change their password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1622,12 +1633,12 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user old password"
+        description: "the hashed user old password"
       - name: "newPassword"
         in: formData
         required: true
         type: "string"
-        description: "the user new password"
+        description: "the hashed user new password"
       - name: "customerAgentId"
         in: formData
         required: true
@@ -1646,6 +1657,7 @@ paths:
   /forgotPassword:
     post:
       operationId: "forgotPassword"
+      summary: "[ forgotPassword service ]"
       description: "This service allows users to regenerate a new password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
@@ -1682,7 +1694,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user pin card"
+        description: "the hashed user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
@@ -1697,7 +1709,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user new password"
+        description: "the hashed user new password"
       - name: "sessionId"
         in: formData
         required: true
@@ -1716,6 +1728,7 @@ paths:
   /changeRegisPin:
     post:
       operationId: "changeRegisPin"
+      summary: "[ changeRegisPin service ]"
       description: "This service allows users to change their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
@@ -1762,7 +1775,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user new pin card"
+        description: "the hashed user new pin card"
       - name: "login"
         in: formData
         required: true
@@ -1781,6 +1794,7 @@ paths:
   /forgotRegisPin:
     post:
       operationId: "forgotRegisPin"
+      summary: "[ forgotRegisPin service ]"
       description: "This service allows users to regenerate their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -1861,6 +1875,7 @@ paths:
   /getOperationReasons:
     post:
       operationId: "getOperationReasons"
+      summary: "[ getOperationReasons service ]"
       description: "This service allows users to get the reasons list of a card operation. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
@@ -1916,6 +1931,7 @@ paths:
   /getSecretQuestions:
     post:
       operationId: "getSecretQuestions"
+      summary: "[ getSecretQuestions service ]"
       description: "This service allows users to get the list of questions to use at the enrollment stage. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
@@ -1961,6 +1977,7 @@ paths:
   /checkToken:
     post:
       operationId: "checkToken"
+      summary: "[ checkToken service ]"
       description: "This service allows to check the customer token (enrollment token, change device...) by the mobile server and retrieves the customer data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
@@ -1992,7 +2009,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the request token"
+        description: "the hashed request token"
       - name: "customerAgentId"
         in: formData
         required: true
@@ -2016,6 +2033,7 @@ paths:
   /enrollBankedCustomer:
     post:
       operationId: "enrollBankedCustomer"
+      summary: "[ enrollBankedCustomer service ]"
       description: "This service allows users to enroll banked mobile customers. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Banked Customer ]"
       parameters:
       - name: "appPlateform"
@@ -2057,7 +2075,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user password"
+        description: "the hashed user password"
       - name: "email"
         in: formData
         required: false
@@ -2101,6 +2119,7 @@ paths:
   /createPin:
     post:
       operationId: "createPin"
+      summary: "[ createPin service ]"
       description: "This service allows end mobile users to register their pin during the enrollment stage. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
@@ -2137,7 +2156,7 @@ paths:
         in: formData
         required: true
         type: "string"
-        description: "the user new pin card"
+        description: "the hashed user new pin card"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
