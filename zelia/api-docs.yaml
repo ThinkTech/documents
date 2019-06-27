@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   title: "Zelia WS"
-  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced by the mobile server and consumed by the mobile application"
+  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced by the mobile server and consumed by the mobile application [ ANDROID, IOS ]"
   termsOfService: "https://s2mworldwide.com/services/terms"
   contact:
     name: "S2M"
@@ -147,7 +147,7 @@ definitions:
              description: "the currency decimal"
          services:
           type: array
-          description: "the list of the services"
+          description: "the list of the services subscribed"
           items:
            type : string
            description: "the name of the service"
@@ -256,7 +256,7 @@ definitions:
         description: "the response reference"
       cardTrans:
         type: array
-        description: "the list of the transactions"
+        description: "the list of the card transactions"
         items:
          type: object
          properties:
@@ -759,7 +759,7 @@ definitions:
         description: "the response reference"
       reasonList:
         type: array
-        description: "the list of the operation reasons"
+        description: "the reasons list of a card operation"
         items:
          type: object
          properties:
@@ -806,7 +806,7 @@ definitions:
         description: "the response reference"
       questionsList:
         type: array
-        description: "the list of the secret questions"
+        description: "the list of the secret questions to use at the enrollment stage"
         items:
          type: object
          properties:
@@ -1381,7 +1381,7 @@ paths:
   /getMySecretQuestion:
     post:
       operationId: "getMySecretQuestion"
-      description: "This service allows users to get a list of questions to register. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
+      description: "This service allows users to get a secret question. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
