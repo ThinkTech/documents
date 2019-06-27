@@ -2,12 +2,12 @@
 swagger: "2.0"
 info:
   title: "Zelia WS"
-  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced and consumed"
-  termsOfService: "https://s2mworldwide.com/terms/"
+  description: "The purpose of this document is to define the functional specifications related to the Zelia web services regarding the inputs and the outputs that must be produced by the mobile server and consumed by the mobile application"
+  termsOfService: "https://s2mworldwide.com/services/terms"
   contact:
-    name: "S2M Support"
-    url: "https://s2mworldwide.com/support"
-    email: "support@s2m.ma" 
+    name: "S2M"
+    url: "https://s2mworldwide.com"
+    email: "support@s2m.ma"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -20,1425 +20,2023 @@ consumes:
 produces:
   - application/json
 definitions:
-  loginResponse:
+  LoginResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 370 : incorrect login }\n
+         , { 371 : incorrect password }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, incorrect login, incorrect password ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       responseLogin:
         type: object
         properties:
          phone:
           type: string
+          description: "the customer mobile number"
          id:
           type: string
+          description: "the customer identifier"
+         type:
+          type: string
+          description: "the possible values are : 1:Banked customer"
          language:
           type: string
+          description: "the customer preferred language "
          secretQuestion:
-          type: object
-          properties:
+          type: array
+          description: "the list of the secret questions"
+          items:
+           type: object
+           properties:
             key:
              type: string
+             description: "the secret question key"
             value:
               type: string
+              description: "the secret question value"
          addAdr1:
           type: string
+          description: "the customer first address"
          addAdr2:
           type: string
+          description: "the customer second address"
          postalCode:
           type: string
+          description: "the customer postal code"
          city:
           type: string
+          description: "the customer city"
          countryCode:
           type: string
+          description: "the customer country code"
          mcc:
           type: string
+          description: "the value is NULL if appType=C"
          firstName:
           type: string
+          description: "the customer first name"
          lastName:
           type: string
+          description: "the customer last name"
          email:
           type: string
+          description: "the customer email"
          nationality:
           type: string
+          description: "the customer nationality"
          defaultAccount:
           type: string
+          description: "the customer default account"
          defaultCurrency:
           type: string
+          description: "the customer default currency"
          attemptCounter:
           type: string
+          description: "the customer attempt counter"
          pinEntryIndicator:
           type: string
+          description: "the customer pin entry indicator"
          deviceStatus:
           type: string
+          description: "the customer device status"
          terminalNumber:
           type: string
+          description: "the value is NULL if appType=C"
          login:
           type: string
-         photUrl:
+          description: "the customer login"
+         photoUrl:
           type: string
+          description: "the customer photo url"
          tokenLifetime:
           type: string
+          description: "the customer token lifetime"
          institutionCurrencies:
           type: array
+          description: "the list of the institution currencies"
           items:
            type : object
            properties:
             curCode:
              type: string
+             description: "the currency code"
             curIden:
-              type: string
+             type: string
+             description: "the currency identifier"
             curDecimal:
-              type: string
+             type: string
+             description: "the currency decimal"
          services:
           type: array
+          description: "the list of the services"
           items:
            type : string
-  getCardsResponse:
+           description: "the name of the service"
+  CardsResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 108 : phoneNumber not exists }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, phoneNumber not exists ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       cards:
         type: array
+        description: "the list of the user cards"
         items:
          type: object
          properties: 
           iden:
             type: string
+            description: "card program identifier"
           domain:
             type: string
+            description: "card program domain"
           description:
             type: string
+            description: "card program description"
           cards:
             type: array
+            description: "the list of the card programs"
             items:
              type: object
              properties:
               cardCode:
                type: string
+               description: "card code"
               truncatedCardNumber:
                type: string
+               description: "truncated PAN"
               name:
                type: string
+               description: "card name"
               status:
                type: string
+               description: "card status"
               expirydate:
                type: string
+               description: "card expiry date"
               renew:
                type: string
+               description: "the value must be true or false"
               opposed:
                type: string
-  getCardTransResponse:
+               description: "the value must be true or false"
+  CardTransResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       cardTrans:
         type: array
+        description: "the list of the transactions"
         items:
          type: object
          properties:
           amount:
            type: string
+           description: "the transaction amount"
           sign:
            type: string
+           description: "the possible values are D:Debit or C:Credit"
           currency:
            type: object
            properties:
             id:
              type: string
+             description: "technical code"
             label:
              type: string
+             description: "alpha code"
             iden:
              type: string
+             description: "ISO code"
           label:
            type: string
+           description: "transaction label"
           transDate:
            type: string
-  updateCardResponse:
+           description: "transaction date"
+  CardResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 388 : not data found }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, no data found ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  getLocationResponse:
+        description : "the response reference"
+  LocationResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 395 : no location found }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, no location found ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description: "the response reference"
       locations:
         type: array
+        description: "the list of the locations"
         items:
          type: object
          properties:
            type:
             type: string
+            description: "the location type"
            longitude:
             type: string
+            description: "the location longitude"
            latitude:
             type: string
+            description: "the location latitude"
            agentIden:
             type: string
+            description: "the agent identifier"
            agentName:
             type: string
+            description: "the agent name"
            agentPhone:
             type: string
+            description: "the agent mobile number"
            branchIden:
             type: string
+            description: "the branch identifier"
            branchCorpName:
             type: string
+            description: "the branch corporation name"
            branchInit:
             type: string
+            description: "the branch init"
            attNum:
             type: string
+            description: "the att number"
            attLabel:
             type: string
+            description: "the att label"
            posNum:
             type: string
+            description: "the pos number"
            posLabel:
             type: string
+            description: "the pos label"
            addr1:
             type: string
+            description: "the location first address"
            addr2:
             type: string
+            description: "the location second address"
            city:
             type: string
+            description: "the location city"
            cityLabel:
             type: string
+            description: "the location city label"
            zipCode:
             type: string
+            description: "the location zip code"
            distance:
             type: string
-  getLoyaltyPointResponse:
+            description: "the location distance"
+  LoyaltyPointResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-      loyalPoints:
+        description : "the response reference"
+      loyaltyPoints:
         type : string
-  topUpCardResponse:
+        description: "the customer loyalty points"
+  TopUpCardResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  getMySecretQuestionResponse:
+        description : "the response reference"
+  MySecretQuestionResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 309 : language not present }\n
+         , { 302 : mobile in blacklist }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, language not present, mobile in blacklist ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description: "the response reference"
       mySecretQuestion:
         type: object
+        description: "the secret question"
         properties:
          key:
           type: string
+          description: "the secret question key"
          value:
           type: string
-  forgotUserNameResponse:
+          description: "the secret question value"
+  ForgotUserNameResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 351 : mobile not exists }\n
+         , { 302 : mobile in blacklist }\n
+         , { 331 : invalid pin }\n
+         , { 381 : incorrect secret response }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, mobile not exists, mobile in blacklist, invalid pin, incorrect secret response ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       login:
         type: string
-  updateCustomerAgentResponse:
+        description: "the customer login"
+  UpdateCustomerAgentResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 302 : mobile in blacklist }\n
+         , { 340 : invalid session id }\n
+         , { 341 : session id expired }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, mobile in blacklist, invalid session id, session id expired ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  changePasswordResponse:
+        description : "the response reference"
+  ChangePasswordResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 351 : mobile not exists }\n
+         , { 302 : mobile in blacklist }\n
+         , { 340 : invalid session id }\n
+         , { 341 : session id expired }\n
+         , { 321 : agent/customer not found }\n
+         , { 350 : agent/customer bloqued }\n
+         , { 353 : security error }\n
+         , { 371 : password incorrect }\n
+         , { 372 : number of attempts reached }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, mobile not exists, mobile in blacklist, invalid session id, session id expired, agent/customer not found, agent/customer bloqued, security error, password incorrect, number of attempts reached ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  forgotPasswordResponse:
+        description: "the response reference"
+  ForgotPasswordResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 351 : mobile not exists }\n
+         , { 302 : mobile in blacklist }\n
+         , { 380 : incorrect secret question }\n
+         , { 381 : incorrect secret response }\n
+         , { 312 : incorrect pin }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, mobile in blacklist, incorrect secret question, incorrect secret response, incorrect pin ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  changeRegisPinResponse:
+        description : "the response reference"
+  ChangeRegisPinResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 351 : mobile not exists }\n
+         , { 302 : mobile in blacklist }\n
+         , { 312 : incorrect pin }\n
+         , { 340 : invalid session id }\n
+         , { 341 : session id expired }\n
+         , { 350 : user not permitted }\n
+         , { 353 : security error }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported,  mobile not exists, mobile in blacklist, incorrect pin, invalid session id, session id expired, user not permitted, security error ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  forgotRegisPinResponse:
+        description: "the response reference"
+  ForgotRegisPinResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 351 : mobile not exists }\n
+         , { 302 : mobile in blacklist }\n
+         , { 340 : invalid session id }\n
+         , { 341 : session id expired }\n
+         , { 350 : user not permitted }\n
+         , { 353 : security error }\n
+         , { 353 : incorrect password }\n
+         , { 381 : incorrect secret response }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported,  mobile not exists, mobile in blacklist, invalid session id, session id expired, user not permitted, security error, incorrect password, incorrect secret response ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  getOperationReasonsResponse:
+        description : "the response reference"
+  OperationReasonsResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 388 : no data found }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, no data found ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description: "the response reference"
       reasonList:
         type: array
+        description: "the list of the operation reasons"
         items:
          type: object
          properties:
           reasonCode:
            type: string
+           description: "the operation reason code"
           reasonIden:
            type: string
+           description: "the operation reason identifier"
           reasonLabel:
            type: string
-  getSecretQuestionsResponse:
+           description: "the operation reason label"
+  SecretQuestionsResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 309 : language not present }\n
+         , { 302 : mobile in blacklist }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, language not present, mobile in blacklist ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       questionsList:
         type: array
+        description: "the list of the secret questions"
         items:
          type: object
          properties:
           key:
            type: string
+           description: "the secret question key"
           value:
            type: string
-  checkTokenResponse:
+           description: "the secret question value"
+  CheckTokenResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 302 : mobile in blacklist }\n
+         , { 306 : mobile not exists }\n
+         , { 303 : token expired }\n
+         , { 304 : incorrect token }\n
+         , { 305 : customer not exists in token list }\n
+         , { 302 : mobile already enrolled }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, language not present, mobile in blacklist, mobile not exists, token expired, incorrect token, customer not exists in token list, mobile already enrolled ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
       title:
         type: string
+        description: "the user title"
       name:
         type: string
+        description: "the user name"
       mail:
         type: string
+        description: "the user email"
       customerAgentIden:
         type: string
+        description: "the user identifier"
       agentCustomerType:
         type: string
-        enum: ["CUSTOMER","AGENT","DEVICE_NEW_SERIAL_NUMBER"]
-  enrollBankedResponse:
+        description: "the possible values are \n \ 
+        CUSTOMER, AGENT, DEVICE_NEW_SERIAL_NUMBER"
+  EnrollBankedResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 302 : mobile in blacklist }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, language not present, mobile in blacklist ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
-  createPinResponse:
+        description : "the response reference"
+  CreatePinResponse:
     type: object
     properties:
       responseCode:
         type: string
+        description: "the possible values are \n \
+         { 000 : approved or completed successfully }\n
+         , { 196 : system malfunction }\n
+         , { 307 : format error }\n
+         , { 301 : service not authorized }\n
+         , { 300 : mobile application out of date }\n
+         , { 384 : version not supported }\n
+         , { 302 : mobile in blacklist }\n
+         "
       responseDescription:
         type: string
+        description: "the possible values are \n \
+         [ approved or completed successfully, system malfunction, format error, service not authorized, mobile application out of date, version not supported, language not present, mobile in blacklist ]
+         "
       responseTime:
         type: string
+        description: "the format of the value must be YYMMDDHH24MISS"
       responseReference:
         type: string
+        description : "the response reference"
 paths:
   /login:
     post:
       operationId: "login"
-      description : "this service allows users to authenticate in the application and retrieve account data. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to authenticate in the application and to retrieve their account data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: string
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "serialNumber"
         in: formData
         required: true
         type: "string"
+        description : "the serial number"
       - name: "login"
         in: formData
         required: true
         type: string
+        description : "the user login"
       - name: "password"
         in: formData
         required: true
         type: string
+        description : "the user password"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/loginResponse'
+            $ref: '#/definitions/LoginResponse'
   /getCards:
     post:
       operationId: "getCards"
-      description : "this service allows users to get a list of cards. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to get a list of cards. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description: "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getCardsResponse'
+            $ref: '#/definitions/CardsResponse'
   /getCardTrans:
     post:
       operationId: "getCardTrans"
-      description : "this service allows users to get card transactions. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to get a card transactions. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
+        description : "the user card code"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getCardTransResponse'
+            $ref: '#/definitions/CardTransResponse'
   /updateCard:
     post:
       operationId: "updateCard"
-      description : "this service allows users to update a card status. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to update a card status. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "operation"
         in: formData
         required: true
         type: "string"
+        description : "the value must be ACTIVE or BLOCKED"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
+        description : "the user card code"
       - name: "motifCode"
         in: formData
         required: false
         type: "string"
+        description : "the user card motif code"
       - name: "motifIden"
         in: formData
         required: false
         type: "string"
+        description : "the user card motif iden"
       - name: "motifLabel"
         in: formData
         required: false
         type: "string"
+        description : "the user card motif label"
       - name: "pin"
         in: formData
         required: true
         type: "string"
+        description : "the user card pin"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/updateCardResponse'
+            $ref: '#/definitions/CardResponse'
   /getLocation:
     post:
       operationId: "getLocation"
-      description : "this service allows users to get a list of branch, atm and agents from a geographic coordinates. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to get a list of branchs, atms and agents from a geographic coordinates. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "lat"
         in: formData
         required: true
         type: "string"
+        description : "the location latitude"
       - name: "lon"
         in: formData
         required: true
         type: "string"
+        description : "the location longitude"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "login"
         in: formData
-        required: true
+        required: false
         type: "string"
+        description : "the user login"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getLocationResponse'
+            $ref: '#/definitions/LocationResponse'
   /getLoyaltyPoint:
     post:
       operationId: "getLoyaltyPoint"
-      description : "this service allows users to get a list of branch, atm and agents from a geographic coordinates. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to get their loyalty points. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
+        description : "the user card code"
       - name: "login"
         in: formData
-        required: true
+        required: false
         type: "string"
+        description : "the user login"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getLoyaltyPointResponse'
+            $ref: '#/definitions/LoyaltyPointResponse'
   /topUpCard:
     post:
       operationId: "topUpCard"
-      description : "this service allows users to top up a card. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to top up a card. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: false
         type: "string"
+        description : "the user mobile number"
       - name: "cardCode"
         in: formData
         required: true
         type: "string"
+        description : "the user card code"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "qrCodeData"
         in: formData
         required: true
         type: "string"
+        description : "the user card QR code data"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/topUpCardResponse'
+            $ref: '#/definitions/TopUpCardResponse'
   /getMySecretQuestion:
     post:
       operationId: "getMySecretQuestion"
-      description : "this service allows users to  get questions list to register. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to get a list of questions to register. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getMySecretQuestionResponse'
+            $ref: '#/definitions/MySecretQuestionResponse'
   /forgotUserName:
     post:
       operationId: "forgotUserName"
-      description : "this service allows users to regenerate a username. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to regenerate a username. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "pin"
         in: formData
         required: true
         type: "string"
+        description : "the user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
+        description : "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
+        description : "the secret question answer"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/forgotUserNameResponse'
+            $ref: '#/definitions/ForgotUserNameResponse'
   /updateCustomerAgent:
     post:
       operationId: "updateCustomerAgent"
-      description : "this service allows users to update customer and agent informations. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to update their information. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
+        description : "the user identifier"
       - name: "mail"
         in: formData
         required: true
         type: "string"
+        description : "the user email"
       - name: "address1"
         in: formData
         required: true
         type: "string"
+        description : "the user first address"
       - name: "city"
         in: formData
         required: true
         type: "string"
+        description : "the user city"
       - name: "address2"
         in: formData
         required: true
         type: "string"
+        description : "the user second address"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "photoUrl"
         in: formData
         required: false
         type: "string"
+        description : "the user photo url"
       - name: "pin"
         in: formData
         required: true
         type: "string"
+        description : "the user pin card"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/updateCustomerAgentResponse'
+            $ref: '#/definitions/UpdateCustomerAgentResponse'
   /changePassword:
     post:
       operationId: "changePassword"
-      description : "this service allows users to change the password. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to change their password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       - name: "oldPassword"
         in: formData
         required: true
         type: "string"
+        description : "the user old password"
       - name: "newPassword"
         in: formData
         required: true
         type: "string"
+        description : "the user new password"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
+        description : "the user identifier"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/changePasswordResponse'
+            $ref: '#/definitions/ChangePasswordResponse'
   /forgotPassword:
     post:
       operationId: "forgotPassword"
-      description : "this service allows users to regenerate a new password. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to regenerate a new password. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "pin"
         in: formData
         required: true
         type: "string"
+        description : "the user pin card"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
+        description : "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
+        description : "the secret question answer"
       - name: "newPassword"
         in: formData
         required: true
         type: "string"
+        description : "the user new password"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       responses:
        200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/forgotPasswordResponse'
+            $ref: '#/definitions/ForgotPasswordResponse'
   /changeRegisPin:
     post:
       operationId: "changeRegisPin"
-      description : "this service allows users to change the registration pin used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to change their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent, Operator ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "oldPin"
         in: formData
         required: true
         type: "string"
+        description : "the user old pin card"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
+        description : "the user new pin card"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/changeRegisPinResponse'
+            $ref: '#/definitions/ChangeRegisPinResponse'
   /forgotRegisPin:
     post:
       operationId: "forgotRegisPin"
-      description : "this service allows users to regenerate the registration pin used by a user. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description : "This service allows users to regenerate their registration pin. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user phone number"
       - name: "cusIden"
         in: formData
         required: true
         type: "string"
+        description : "the customer identifier"
       - name: "password"
         in: formData
         required: true
         type: "string"
+        description : "the user password"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
+        description : "the user new pin card"
       - name: "login"
         in: formData
         required: true
         type: "string"
+        description : "the user login"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
+        description : "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
+        description : "the secret question answer"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/forgotRegisPinResponse'
+            $ref: '#/definitions/ForgotRegisPinResponse'
   /getOperationReasons:
     post:
       operationId: "getOperationReasons"
-      description: "this service allows users to get the list of card operation reasons. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "This service allows users to get the reasons list of a card operation. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       - name: "sessionId"
         in: formData
         required: true
         type: "string"
+        description : "the user session identifier"
       - name: "customerIden"
         in: formData
         required: true
         type: "string"
+        description : "the customer identifier"
       - name: "cardOperation"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ACTIVE, BLOCKED, REPLACED or OPPOSED"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getOperationReasonsResponse'
+            $ref: '#/definitions/OperationReasonsResponse'
   /getSecretQuestions:
     post:
       operationId: "getSecretQuestions"
-      description: "this service allows users to get the list of questions tu use at the enrollement. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "This service allows users to get the list of questions to use at the enrollment stage. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/getSecretQuestionsResponse'
+            $ref: '#/definitions/SecretQuestionsResponse'
   /checkToken:
     post:
       operationId: "checkToken"
-      description: "this service allows to check the customer token (enrollment token, change device...) by the mobile server and retrieves the customer data. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "This service allows to check the customer token (enrollment token, change device...) by the mobile server and retrieves the customer data. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer, Agent ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "token"
         in: formData
         required: true
         type: "string"
+        description : "the request token"
       - name: "customerAgentId"
         in: formData
         required: true
         type: "string"
+        description : "the user identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/checkTokenResponse'
+            $ref: '#/definitions/CheckTokenResponse'
   /enrollBankedCustomer:
     post:
       operationId: "enrollBankedCustomer"
-      description: "this service allows users to enroll banked mobile customer. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "This service allows users to enroll banked mobile customers. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Banked Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "login"
         in: formData
         required: true
+        description : "the user login"
         type: "string"
       - name: "password"
         in: formData
         required: true
         type: "string"
+        description : "the user password"
       - name: "email"
         in: formData
         required: false
         type: "string"
+        description : "the user email"
       - name: "secretQuestionCode"
         in: formData
         required: true
         type: "string"
+        description : "the secret question code"
       - name: "secretQuestionAnswer"
         in: formData
         required: true
         type: "string"
+        description : "the secret question answer"
       - name: "photoUrl"
         in: formData
         required: false
         type: "string"
+        description : "the user photo url"
       - name: "identificationUrl"
         in: formData
         required: false
         type: "string"
+        description : "the user identification url"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       - name: "serialNumber"
         in: formData
         required: true
         type: "string"
+        description : "the serial number"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/enrollBankedResponse'
+            $ref: '#/definitions/EnrollBankedResponse'
   /createPin:
     post:
       operationId: "createPin"
-      description: "this service allows end mobile users to register their pin during the enrollement stage. The content type of the request must be application/x-www-form-urlencoded and that of the response must be application/json"
+      description: "This service allows end mobile users to register their pin during the enrollment stage. The request content type must be application/x-www-form-urlencoded and that of the response must be application/json. The users of the service are : [ Customer ]"
       parameters:
       - name: "appPlateform"
         in: formData
         required: true
         type: "string"
+        description: "the value must be ANDROID or IOS"
       - name: "appVersion"
         in: formData
         required: true
         type: "string"
+        description : "the application version"
       - name: "appType"
         in: formData
         required: true
         type: "string"
+        description: "the value must be A:Agent or C:Customer"
       - name: "institutionId"
         in: formData
         required: true
         type: "string"
+        description : "the institution identifier"
       - name: "requesTime"
         in: formData
         required: true
         type: "string"
+        description: "the format of the value must be YYMMDDHH24MISS"
       - name: "phoneNumber"
         in: formData
         required: true
         type: "string"
+        description : "the user mobile number"
       - name: "newPin"
         in: formData
         required: true
         type: "string"
+        description : "the user new pin card"
       - name: "customerPreferedLanguage"
         in: formData
         required: true
         type: "string"
+        description: "the value must be 1:French,2:English,3:Arabic"
       responses:
         200: 
           description: returns a json response
           schema:
-            $ref: '#/definitions/createPinResponse'
+            $ref: '#/definitions/CreatePinResponse'
